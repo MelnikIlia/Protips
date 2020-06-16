@@ -831,7 +831,7 @@ body.lock {
 	display: inline-block;
 	vertical-align: super;
 }
-.form {
+.subscribe .form {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
