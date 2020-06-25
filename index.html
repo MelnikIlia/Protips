@@ -10,28 +10,79 @@
 
 		<!-- Required additional / cdn -->
 		<!-- Font Awesome -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" defer async ></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" defer async></script>
 		<link
 			type="text/css"
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-			async
-		/>
+			async />
 
 		<!-- Slick slider -->
 		<link type="text/css" rel="preload" href="slick/slick.css" as="style" />
-		<link type="text/css" rel="preload" href="slick/slick-theme.css" as="style" />
+		<link
+			type="text/css"
+			rel="preload"
+			href="slick/slick-theme.css"
+			as="style" />
 
-		<link type="text/css" rel="preload" href="css/normalize.min.css" as="style" />
+		<link
+			type="text/css"
+			rel="preload"
+			href="css/normalize.min.css"
+			as="style" />
 		<link type="text/css" rel="preload" href="css/reset.min.css" as="style" />
-		<link type="text/css" rel="preload" href="css/style.min.css" as="style" />
+		<link type="text/css" rel="stylesheet" href="css/style.min.css" />
+
+		<style>
+			.hero {
+				padding-top: 165px;
+				margin-bottom: 130px;
+			}
+
+			.hero__row {
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+			}
+
+			.hero__title {
+				color: #3b3322;
+				font-size: 44px;
+				line-height: 54px;
+				text-align: left;
+				margin-bottom: 20px;
+			}
+
+			.hero__text {
+				color: #544837;
+				font-size: 20px;
+				line-height: 30px;
+				margin-bottom: 24px;
+			}
+
+			.hero__media {
+				position: relative;
+			}
+
+			.hero__img {
+				width: 100%;
+				height: 100%;
+			}
+
+			.hero-bg {
+				position: absolute;
+				top: 0;
+				right: 0;
+				z-index: -1;
+			}
+		</style>
 	</head>
 
 	<body>
 		<header class="header container">
 			<nav class="nav row">
-				<a href="#" class="brand-logo"
-					>Pro<b class="bold">tips</b>
+				<a href="#" class="brand-logo">
+					Pro<b class="bold">tips</b>
 					<span class="brand-logo--square"></span>
 				</a>
 				<div class="nav__menu">
@@ -77,18 +128,21 @@
 						class="form__input"
 						type="text"
 						name="login"
-						placeholder="Login" />
+						placeholder="Login"
+					/>
 					<input
 						class="form__input"
 						type="password"
 						name="password"
-						placeholder="Password" />
+						placeholder="Password"
+					/>
 					<a class="form-sign-in__link" href="#">Forget password?</a>
 					<input
 						class="button button--accent form__button"
 						type="submit"
 						name="submit"
-						value="Log in" />
+						value="Log in"
+					/>
 				</form>
 				<div class="form-footer">
 					<p class="form-footer__text">Don't have an account?</p>
@@ -103,27 +157,32 @@
 						class="form__input"
 						type="email"
 						name="email"
-						placeholder="E-mail" />
+						placeholder="E-mail"
+					/>
 					<input
 						class="form__input"
 						type="text"
 						name="name"
-						placeholder="Full Name" />
+						placeholder="Full Name"
+					/>
 					<input
 						class="form__input"
 						type="text"
 						name="login"
-						placeholder="Login" />
+						placeholder="Login"
+					/>
 					<input
 						class="form__input"
 						type="password"
 						name="password"
-						placeholder="Password" />
+						placeholder="Password"
+					/>
 					<input
 						class="button button--accent form__button"
 						type="button"
 						name="submit"
-						value="Sign up" />
+						value="Sign up"
+					/>
 				</form>
 			</div>
 		</div>
@@ -164,13 +223,15 @@
 									height="65"
 									viewBox="0 0 65 65"
 									fill="none"
-									xmlns="http://www.w3.org/2000/svg" >
+									xmlns="http://www.w3.org/2000/svg"
+								>
 									<g filter="url(#filter0_d)">
 										<path
 											fill-rule="evenodd"
 											clip-rule="evenodd"
 											d="M40.0557 24.0279C43.741 25.8705 43.741 31.1295 40.0557 32.9721L11.2361 47.382C7.91156 49.0442 4 46.6267 4 42.9098V14.0902C4 10.3733 7.91156 7.95578 11.2361 9.61803L40.0557 24.0279Z"
-											fill="white" />
+											fill="white"
+										/>
 									</g>
 									<defs>
 										<filter
@@ -180,34 +241,39 @@
 											width="64.8197"
 											height="64.8326"
 											filterUnits="userSpaceOnUse"
-											color-interpolation-filters="sRGB">
+											color-interpolation-filters="sRGB"
+										>
 											<feFlood flood-opacity="0" result="BackgroundImageFix" />
 											<feColorMatrix
 												in="SourceAlpha"
 												type="matrix"
-												values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+												values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+											/>
 											<feOffset dx="9" dy="4" />
 											<feGaussianBlur stdDeviation="6.5" />
 											<feColorMatrix
 												type="matrix"
-												values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.127868 0" />
+												values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.127868 0"
+											/>
 											<feBlend
 												mode="normal"
 												in2="BackgroundImageFix"
-												result="effect1_dropShadow" />
+												result="effect1_dropShadow"
+											/>
 											<feBlend
 												mode="normal"
 												in="SourceGraphic"
 												in2="effect1_dropShadow"
-												result="shape" />
+												result="shape"
+											/>
 										</filter>
 									</defs>
 								</svg>
 							</button>
 							<picture>
 								<source srcset="img/Media.webp" type="image/webp" />
-                                <img class="hero__img" src="img/Media.png" alt="Hero video" />
-                            </picture>
+								<img class="hero__img" src="img/Media.png" alt="Hero video" />
+							</picture>
 						</div>
 						<!-- /.hero__media -->
 					</div>
@@ -220,12 +286,14 @@
 					height="614"
 					viewBox="0 0 757 614"
 					fill="none"
-					xmlns="http://www.w3.org/2000/svg">
+					xmlns="http://www.w3.org/2000/svg"
+				>
 					<path
 						fill-rule="evenodd"
 						clip-rule="evenodd"
 						d="M596 610C820.5 644 1163 388.752 1163 140.5C1163 -107.752 900.863 -309 577.5 -309C254.137 -309 -176.746 41 77.877 265C332.5 489 371.5 576 596 610Z"
-						fill="#FF4F4F" />
+						fill="#FF4F4F"
+					/>
 				</svg>
 			</section>
 			<!-- /.hero -->
@@ -236,8 +304,8 @@
 						<div class="feature__icon feature__icon--outline">
 							<picture>
 								<source srcset="img/Icons/Atlas.svg" type="image/webp" />
-                                <img src="img/Icons/Atlas.svg" alt="" />
-                            </picture>
+								<img src="img/Icons/Atlas.svg" alt="" />
+							</picture>
 						</div>
 						<h3 class="feature__title bold">First click tests</h3>
 						<p class="feature__text">
@@ -249,8 +317,8 @@
 						<div class="feature__icon feature__icon--fill">
 							<picture>
 								<source srcset="img/Icons/Danger.svg" type="image/webp" />
-                                <img src="img/Icons/Danger.svg" alt="" />
-                            </picture>
+								<img src="img/Icons/Danger.svg" alt="" />
+							</picture>
 						</div>
 						<h3 class="feature__title bold">Design surveys</h3>
 						<p class="feature__text">
@@ -276,9 +344,10 @@
 							<picture>
 								<source
 									srcset="img/Icons/User-Astronaut.svg"
-									type="image/webp" />
-                                <img src="img/Icons/User-Astronaut.svg" alt="" />
-                            </picture>
+									type="image/webp"
+								/>
+								<img src="img/Icons/User-Astronaut.svg" alt="" />
+							</picture>
 						</div>
 						<h3 class="feature__title bold">User astronaut</h3>
 						<p class="feature__text">
@@ -297,8 +366,8 @@
 						<div class="about__img image-wrapper">
 							<picture>
 								<source srcset="img/Illustrator.webp" type="image/webp" />
-                                <img src="img/Illustrator.png" alt="" />
-                            </picture>
+								<img src="img/Illustrator.png" alt="" />
+							</picture>
 						</div>
 					</div>
 					<!-- /.about__column -->
@@ -323,8 +392,8 @@
 								<li class="list__item">What S Under Your Grill</li>
 							</ul>
 							<a class="about__button button button--fill" href="#">
-                                Know more
-                            </a>
+								Know more
+							</a>
 							<button class="play-video-link button">
 								Watch Video
 								<i class="fas fa-play"></i>
@@ -341,7 +410,7 @@
 				<div class="testimonial__block">
 					<h2 class="testimonial__title title">Testimonial</h2>
 					<h3 class="testimonial__subtitle subtitle">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Vampires The Romantic Ideology Behind Them
 					</h3>
 					<div class="testimonials">
 						<ul class="testimonials__list list">
@@ -351,14 +420,15 @@
 										<picture>
 											<source
 												srcset="img/Testimonials/Picture_1.webp"
-												type="image/webp" />
+												type="image/webp"
+											/>
 											<img src="img/Testimonials/Picture_1.png" alt="" />
 										</picture>
 									</a>
 									<a class="card__title link" href="#">John Doe</a>
 									<h3 class="card__subtitle">CEO, PrettyDopeDesigns</h3>
 									<q class="card__quote">
-                                        When To Use High Heat On Your Barbeque, What S Under Your
+										When To Use High Heat On Your Barbeque, What S Under Your
 										Grill
 									</q>
 								</div>
@@ -369,14 +439,15 @@
 										<picture>
 											<source
 												srcset="img/Testimonials/Picture_1.webp"
-												type="image/webp" />
+												type="image/webp"
+											/>
 											<img src="img/Testimonials/Picture_1.png" alt="" />
 										</picture>
 									</a>
 									<a class="card__title link" href="#">John Doe</a>
 									<h3 class="card__subtitle">CEO, PrettyDopeDesigns</h3>
 									<q class="card__quote">
-                                        When To Use High Heat On Your Barbeque, What S Under Your
+										When To Use High Heat On Your Barbeque, What S Under Your
 										Grill
 									</q>
 								</div>
@@ -387,14 +458,15 @@
 										<picture>
 											<source
 												srcset="img/Testimonials/Picture_1.webp"
-												type="image/webp" />
+												type="image/webp"
+											/>
 											<img src="img/Testimonials/Picture_1.png" alt="" />
 										</picture>
 									</a>
 									<a class="card__title link" href="#">John Doe</a>
 									<h3 class="card__subtitle">CEO, PrettyDopeDesigns</h3>
 									<q class="card__quote">
-                                        When To Use High Heat On Your Barbeque, What S Under Your
+										When To Use High Heat On Your Barbeque, What S Under Your
 										Grill
 									</q>
 								</div>
@@ -412,7 +484,7 @@
 				<div class="story__block">
 					<h2 class="story__title title">Our Story</h2>
 					<h3 class="story__subtitle subtitle">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Vampires The Romantic Ideology Behind Them
 					</h3>
 					<div class="story__row row">
 						<div class="story__column">
@@ -432,9 +504,9 @@
 									</p>
 									<p class="card__text">
 										<a class="link--underlined" href="#">
-                                            And part of that is the desire to instill
-                                        </a>
-                                        in our children the love of science, of learning and
+											And part of that is the desire to instill
+										</a>
+										in our children the love of science, of learning and
 										particularly the love of nature.
 									</p>
 								</div>
@@ -447,8 +519,8 @@
 								<div class="card__icon">
 									<picture>
 										<source srcset="img/Icons/Hands.svg" type="image/webp" />
-                                        <img src="img/Icons/Hands.svg" alt="icon" />
-                                    </picture>
+										<img src="img/Icons/Hands.svg" alt="icon" />
+									</picture>
 								</div>
 								<div class="card__body">
 									<h2 class="card__title">What’s up with the name?</h2>
@@ -477,7 +549,7 @@
 				<div class="blog__body">
 					<h2 class="blog__title title">Our Recent Post</h2>
 					<h3 class="blog__subtitle subtitle">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Vampires The Romantic Ideology Behind Them
 					</h3>
 					<div class="blog-feed">
 						<ul class="blog-feed__list">
@@ -488,8 +560,8 @@
 										<img class="post__img" src="img/Posts/Post_1.png" alt="" />
 									</picture>
 									<a href="#" class="post__title link">
-                                        Upgrading To Microsoft Windows Vista Tips
-                                    </a>
+										Upgrading To Microsoft Windows Vista Tips
+									</a>
 									<!-- /.post__title link -->
 									<div class="post-author">
 										<p class="post-author__text">By <b>Abul Hasan Milon</b></p>
@@ -523,8 +595,8 @@
 										<img class="post__img" src="img/Posts/Post_3.png" alt="" />
 									</picture>
 									<a href="#" class="post__title link">
-                                        The Universe Through A Child S Eyes
-                                    </a>
+										The Universe Through A Child S Eyes
+									</a>
 									<!-- /.post__title link -->
 									<div class="post-author">
 										<p class="post-author__text">By <b>Speed Smith</b></p>
@@ -540,8 +612,8 @@
 										<img class="post__img" src="img/Posts/Post_1.png" alt="" />
 									</picture>
 									<a href="#" class="post__title link">
-                                        Upgrading To Microsoft Windows Vista Tips
-                                    </a>
+										Upgrading To Microsoft Windows Vista Tips
+									</a>
 									<!-- /.post__title link -->
 									<div class="post-author">
 										<p class="post-author__text">By <b>Abul Hasan Milon</b></p>
@@ -575,8 +647,8 @@
 										<img class="post__img" src="img/Posts/Post_3.png" alt="" />
 									</picture>
 									<a href="#" class="post__title link">
-                                        The Universe Through A Child S Eyes
-                                    </a>
+										The Universe Through A Child S Eyes
+									</a>
 									<!-- /.post__title link -->
 									<div class="post-author">
 										<p class="post-author__text">By <b>Speed Smith</b></p>
@@ -584,16 +656,16 @@
 									</div>
 								</div>
 							</li>
-                            <!-- /.list__item post -->
-                            <li>
+							<!-- /.list__item post -->
+							<li>
 								<div class="post">
 									<picture>
 										<source srcset="img/Posts/Post_1.webp" type="image/webp" />
 										<img class="post__img" src="img/Posts/Post_1.png" alt="" />
 									</picture>
 									<a href="#" class="post__title link">
-                                        Upgrading To Microsoft Windows Vista Tips
-                                    </a>
+										Upgrading To Microsoft Windows Vista Tips
+									</a>
 									<!-- /.post__title link -->
 									<div class="post-author">
 										<p class="post-author__text">By <b>Abul Hasan Milon</b></p>
@@ -627,8 +699,8 @@
 										<img class="post__img" src="img/Posts/Post_3.png" alt="" />
 									</picture>
 									<a href="#" class="post__title link">
-                                        The Universe Through A Child S Eyes
-                                    </a>
+										The Universe Through A Child S Eyes
+									</a>
 									<!-- /.post__title link -->
 									<div class="post-author">
 										<p class="post-author__text">By <b>Speed Smith</b></p>
@@ -659,7 +731,8 @@
 							<input
 								class="subscribe__input"
 								type="email"
-								placeholder="Enter your email" />
+								placeholder="Enter your email"
+							/>
 							<!--    <input class = "subscribe__submit" type = "submit" value      = ""> -->
 							<button class="subscribe__button form__button button">
 								<svg
@@ -668,12 +741,14 @@
 									height="34"
 									viewBox="0 0 34 34"
 									fill="none"
-									xmlns="http://www.w3.org/2000/svg">
+									xmlns="http://www.w3.org/2000/svg"
+								>
 									<path
 										fill-rule="evenodd"
 										clip-rule="evenodd"
 										d="M9.92286 21.8843C7.74928 20.5923 0 15.9375 0 15.9375C0 15.9375 30.3006 1.26863 32.9169 0L9.92286 21.8843ZM16.9894 34C16.9894 34 12.4691 25.7178 11.0505 23.1094L34 0.966875L33.9788 1.0625C33.7133 1.59375 16.9894 34 16.9894 34Z"
-										fill="white" />
+										fill="white"
+									/>
 								</svg>
 							</button>
 						</form>
