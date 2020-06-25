@@ -10,616 +10,28 @@
 
 		<!-- Required additional / cdn -->
 		<!-- Font Awesome -->
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
-			defer
-			async
-		></script>
+		<script src="FontAwesome/all.min.js" defer async></script>
 		<link
 			type="text/css"
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-			async
+			rel="preload"
+			href="FontAwesome/all.min.css"
+			as="style"
 		/>
 
 		<!-- Slick slider -->
 		<link type="text/css" rel="preload" href="slick/slick.css" as="style" />
-		<link
-			type="text/css"
-			rel="preload"
-			href="slick/slick-theme.css"
-			as="style"
-		/>
+		<link type="text/css" rel="preload" href="slick/slick-theme.css" as="style" />
 
-		<link
-			type="text/css"
-			rel="preload"
-			href="css/normalize.min.css"
-			as="style"
-		/>
+		<link type="text/css" rel="preload" href="css/normalize.min.css" as="style" />
 		<link type="text/css" rel="preload" href="css/reset.min.css" as="style" />
 		<link type="text/css" rel="stylesheet" href="css/style.min.css" />
-
-		<style>
-			.bold {
-				font-family: Poppins-B;
-				font-weight: 700;
-			}
-
-			.container {
-				width: 100%;
-				padding: 0 8.571428571428571%;
-			}
-
-			.row {
-				display: -webkit-box;
-				display: -ms-flexbox;
-				display: flex;
-				-webkit-box-pack: justify;
-				-ms-flex-pack: justify;
-				justify-content: space-between;
-				-ms-flex-wrap: wrap;
-				flex-wrap: wrap;
-			}
-
-			.column {
-				-webkit-box-flex: 0;
-				-ms-flex: 0 0 100%;
-				flex: 0 0 100%;
-			}
-
-			.button {
-				display: inline-block;
-				padding: 15px 40px;
-				color: #fff;
-				background-color: transparent;
-				border: none;
-				border-radius: 4px;
-				font-size: 16px;
-				font-weight: 700;
-				cursor: pointer;
-			}
-
-			.button--outline {
-				border: 1px solid #fff;
-				-webkit-transition: all 0.3s ease;
-				-o-transition: all 0.3s ease;
-				transition: all 0.3s ease;
-			}
-
-			.button--accent,
-			.button--outline:hover {
-				background-color: #2f281e;
-				border-color: #2f281e;
-			}
-
-			.button--fill {
-				background-color: #ff4f4f;
-				-webkit-transition: all 0.3s ease;
-				-o-transition: all 0.3s ease;
-				transition: all 0.3s ease;
-			}
-
-			.button--fill:hover {
-				background-color: #b91a1a;
-			}
-
-			.button--play {
-				width: auto;
-				height: auto;
-				padding: 0;
-				border-radius: 0;
-			}
-
-			.play-icon {
-				position: absolute;
-				top: 51.5%;
-				left: 53%;
-				-webkit-transform: translate(-50%, -50%);
-				-ms-transform: translate(-50%, -50%);
-				transform: translate(-50%, -50%);
-			}
-
-			.play-oval,
-			.play-oval::after,
-			.play-oval::before {
-				display: block;
-				border-radius: 50%;
-				background-color: rgba(255, 255, 255, 0.19);
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				-webkit-transform: translate(-50%, -50%);
-				-ms-transform: translate(-50%, -50%);
-				transform: translate(-50%, -50%);
-				content: "";
-			}
-
-			.play-oval {
-				width: 100px;
-				height: 100px;
-			}
-
-			.play-oval::before {
-				width: 120px;
-				height: 120px;
-			}
-
-			.play-oval::after {
-				width: 80px;
-				height: 80px;
-			}
-
-			.play-video-link {
-				font-family: Montserrat-R;
-				font-weight: 100;
-				font-size: 19px;
-				line-height: 30px;
-				padding: 0;
-				color: #ff4f4f;
-			}
-
-			.play-video-link .fa-play {
-				display: inline-block;
-				vertical-align: bottom;
-				height: 30px;
-				width: 30px;
-				padding: 5% 0 5% 2%;
-				margin-left: 14px;
-				border: 1px solid #ff4f4f;
-				border-radius: 50%;
-			}
-
-			.button--burger-menu {
-				display: block;
-				width: 30px;
-				height: 20px;
-				padding: 0;
-				position: relative;
-				cursor: pointer;
-				z-index: 3;
-			}
-
-			.button--burger-menu span,
-			.button--burger-menu::after,
-			.button--burger-menu::before {
-				width: 100%;
-				height: 2px;
-				background-color: #fff;
-				position: absolute;
-				left: 0;
-				-webkit-transition: top 0.2s ease 0.2s, -webkit-transform 0.2s ease;
-				transition: top 0.2s ease 0.2s, -webkit-transform 0.2s ease;
-				-o-transition: top 0.2s ease 0.2s, transform 0.2s ease;
-				transition: top 0.2s ease 0.2s, transform 0.2s ease;
-				transition: top 0.2s ease 0.2s, transform 0.2s ease,
-					-webkit-transform 0.2s ease;
-			}
-
-			.button--burger-menu::after,
-			.button--burger-menu::before {
-				content: "";
-				display: block;
-			}
-
-			.button--burger-menu span {
-				top: 10px;
-			}
-
-			.button--burger-menu::before {
-				top: 0;
-			}
-
-			.button--burger-menu::after {
-				top: 19px;
-			}
-
-			.button--burger-menu.active span,
-			.button--burger-menu.active::after,
-			.button--burger-menu.active::before {
-				-webkit-transition: top 0.2s ease, -webkit-transform 0.2s ease 0.2s;
-				transition: top 0.2s ease, -webkit-transform 0.2s ease 0.2s;
-				-o-transition: top 0.2s ease, transform 0.2s ease 0.2s;
-				transition: top 0.2s ease, transform 0.2s ease 0.2s;
-				transition: top 0.2s ease, transform 0.2s ease 0.2s,
-					-webkit-transform 0.2s ease 0.2s;
-			}
-
-			.button--burger-menu.active span {
-				-webkit-transform: scale(0);
-				-ms-transform: scale(0);
-				transform: scale(0);
-			}
-
-			.button--burger-menu.active::before {
-				top: 10px;
-				-webkit-transform: rotate(45deg);
-				-ms-transform: rotate(45deg);
-				transform: rotate(45deg);
-			}
-
-			.button--burger-menu.active::after {
-				top: 10px;
-				-webkit-transform: rotate(-45deg);
-				-ms-transform: rotate(-45deg);
-				transform: rotate(-45deg);
-			}
-
-			.link--underlined {
-				color: inherit;
-				text-decoration: underline;
-			}
-
-			.ibg {
-				background-position: center;
-				background-size: cover;
-				background-repeat: no-repeat;
-				position: relative;
-			}
-
-			.ibg img {
-				width: 0;
-				height: 0;
-				position: absolute;
-				top: 0;
-				left: 0;
-				opacity: 0;
-				visibility: hidden;
-			}
-
-			.slick-dots li {
-				width: 16px;
-				height: 16px;
-				border-radius: 50%;
-				background-color: #c2c2bd;
-			}
-
-			.slick-dots button {
-				opacity: 0;
-			}
-
-			.slick-dots .slick-active {
-				background-color: #ff4f4f;
-			}
-
-			body {
-				font-family: Poppins-R;
-			}
-
-			body.lock {
-				overflow: hidden;
-			}
-
-			.image-wrapper img,
-			.image-wrapper picture {
-				width: 100%;
-			}
-
-			.header {
-				position: fixed;
-				z-index: 10;
-				background-color: transparent;
-				-webkit-transition: background-color 0.2s ease;
-				-o-transition: background-color 0.2s ease;
-				transition: background-color 0.2s ease;
-			}
-
-			.header.scrolled {
-				background-color: #ff4f4f;
-			}
-
-			.nav {
-				height: 116px;
-				-webkit-box-align: center;
-				-ms-flex-align: center;
-				align-items: center;
-				-webkit-transition: height 0.2s ease 0.1s;
-				-o-transition: height 0.2s ease 0.1s;
-				transition: height 0.2s ease 0.1s;
-			}
-
-			.nav.scrolled {
-				-webkit-transition: height 0.2s ease;
-				-o-transition: height 0.2s ease;
-				transition: height 0.2s ease;
-				height: 68px;
-			}
-
-			.nav__menu {
-				-webkit-box-flex: 0;
-				-ms-flex: 0 0 49.95499549954995%;
-				flex: 0 0 49.95499549954995%;
-				display: -webkit-box;
-				display: -ms-flexbox;
-				display: flex;
-				-webkit-box-align: center;
-				-ms-flex-align: center;
-				align-items: center;
-				-webkit-box-pack: justify;
-				-ms-flex-pack: justify;
-				justify-content: space-between;
-				overflow-y: auto;
-			}
-
-			.nav__list {
-				-webkit-box-flex: 0;
-				-ms-flex: 0 0 47.387387387387385%;
-				flex: 0 0 47.387387387387385%;
-			}
-
-			.nav__list-item {
-				display: block;
-				margin: 20px 0;
-				text-align: end;
-			}
-
-			.nav__link {
-				color: #fff;
-				font-size: 14px;
-			}
-
-			.nav__register {
-				display: -webkit-box;
-				display: -ms-flexbox;
-				display: flex;
-				-webkit-box-pack: justify;
-				-ms-flex-pack: justify;
-				justify-content: space-between;
-			}
-
-			.brand-logo {
-				display: inline-block;
-				position: relative;
-				font-size: 24px;
-				color: #2f281e;
-				z-index: 3;
-			}
-
-			.brand-logo--square {
-				display: block;
-				width: 10px;
-				height: 10px;
-				position: absolute;
-				top: 40%;
-				right: 10%;
-				background-color: #ff4f4f;
-				opacity: 0;
-				-webkit-transition: right 0.2s ease-out, opacity 0.2s ease-out;
-				-o-transition: right 0.2s ease-out, opacity 0.2s ease-out;
-				transition: right 0.2s ease-out, opacity 0.2s ease-out;
-			}
-
-			.brand-logo:hover .brand-logo--square {
-				right: -20%;
-				opacity: 1;
-			}
-
-			.register__button {
-				display: block;
-				width: -webkit-max-content;
-				width: -moz-max-content;
-				width: max-content;
-				padding: 11px 23px;
-				margin: 0 0 15px 0;
-			}
-
-			.modal-register {
-				display: -webkit-box;
-				display: -ms-flexbox;
-				display: flex;
-				width: 100%;
-				height: 100%;
-				position: fixed;
-				top: 0;
-				left: 0;
-				background-color: rgba(0, 0, 0, 0.6);
-				opacity: 0;
-				z-index: -2;
-				-webkit-transition: all 0.3s ease-in;
-				-o-transition: all 0.3s ease-in;
-				transition: all 0.3s ease-in;
-			}
-
-			.modal-register.showed {
-				opacity: 1;
-				z-index: 15;
-			}
-
-			.form {
-				position: relative;
-				z-index: 1;
-			}
-
-			.form-sign-in,
-			.form-sign-up {
-				display: -webkit-box;
-				display: -ms-flexbox;
-				display: flex;
-				-webkit-box-orient: vertical;
-				-webkit-box-direction: normal;
-				-ms-flex-direction: column;
-				flex-direction: column;
-				width: 100%;
-				padding: 40px 20px 20px 20px;
-				background-color: #fff;
-				border-radius: 15px 15px 0 0;
-				-webkit-box-sizing: border-box;
-				box-sizing: border-box;
-				position: absolute;
-				bottom: -200%;
-				-webkit-transition: all 0.3s linear;
-				-o-transition: all 0.3s linear;
-				transition: all 0.3s linear;
-				overflow: hidden;
-				overflow-y: auto;
-			}
-
-			.form-sign-in::after,
-			.form-sign-up::after {
-				content: "";
-				display: block;
-				width: 200px;
-				height: 200px;
-				position: absolute;
-				top: -10%;
-				right: -10%;
-				z-index: 0;
-				border-radius: 50%;
-				background-color: #ff4f4f;
-			}
-
-			.form-sign-in.showed,
-			.form-sign-up.showed {
-				bottom: 0;
-			}
-
-			.form-sign-in .form__title,
-			.form-sign-up .form__title {
-				font-size: 22px;
-				font-weight: 300;
-				line-height: 30px;
-				color: #2f281e;
-				margin-bottom: 20px;
-			}
-
-			.form-sign-in .form__input,
-			.form-sign-up .form__input {
-				width: 100%;
-				height: 48px;
-				padding-left: 15px;
-				margin-bottom: 20px;
-				font-size: 16px;
-				font-weight: lighter;
-				line-height: 28px;
-				color: #4c4c4c;
-				border: none;
-				border-radius: 5px;
-				-webkit-box-shadow: 0 2px 4px #4c4c4c;
-				box-shadow: 0 2px 4px #4c4c4c;
-			}
-
-			.form-sign-in .form-sign-in__link {
-				display: inline-block;
-				font-size: 16px;
-				line-height: 30px;
-				color: #2f281e;
-				margin: 0 0 10px 0;
-			}
-
-			.form-sign-in .form__button,
-			.form-sign-up .form__button {
-				display: block;
-				margin-bottom: 15px;
-				font-size: 16px;
-			}
-
-			.form-sign-in .form-footer__text {
-				display: inline-block;
-				font-size: 14px;
-			}
-
-			.modal-close {
-				display: block;
-				width: 30px;
-				height: 30px;
-				margin: 5px;
-				position: relative;
-				z-index: 1;
-				-ms-flex-item-align: end;
-				align-self: flex-end;
-				cursor: pointer;
-			}
-
-			.modal-close::after,
-			.modal-close::before {
-				content: "";
-				display: block;
-				height: 2px;
-				width: 25px;
-				position: relative;
-				left: 0.16rem;
-				border-radius: 15px;
-				background-color: #fff;
-			}
-
-			.modal-close::before {
-				top: 14px;
-				-webkit-transform: rotate(46deg);
-				-ms-transform: rotate(46deg);
-				transform: rotate(46deg);
-			}
-
-			.modal-close::after {
-				top: 12px;
-				-webkit-transform: rotate(-46deg);
-				-ms-transform: rotate(-46deg);
-				transform: rotate(-46deg);
-			}
-
-			.title {
-				font-size: 34px;
-				font-weight: 700;
-				line-height: 42px;
-				text-align: center;
-				color: #342d20;
-			}
-
-			.subtitle {
-				font-size: 16px;
-				font-weight: 500;
-				line-height: 26px;
-				text-align: center;
-				color: #544837;
-			}
-			.hero {
-				padding-top: 165px;
-				margin-bottom: 130px;
-			}
-
-			.hero__row {
-				-webkit-box-align: center;
-				-ms-flex-align: center;
-				align-items: center;
-			}
-
-			.hero__title {
-				color: #3b3322;
-				font-size: 44px;
-				line-height: 54px;
-				text-align: left;
-				margin-bottom: 20px;
-			}
-
-			.hero__text {
-				color: #544837;
-				font-size: 20px;
-				line-height: 30px;
-				margin-bottom: 24px;
-			}
-
-			.hero__media {
-				position: relative;
-			}
-
-			.hero__img {
-				width: 100%;
-				height: 100%;
-			}
-
-			.hero-bg {
-				position: absolute;
-				top: 0;
-				right: 0;
-				z-index: -1;
-			}
-		</style>
 	</head>
 
 	<body>
 		<header class="header container">
 			<nav class="nav row">
-				<a href="#" class="brand-logo">
-					Pro<b class="bold">tips</b>
+				<a href="#" class="brand-logo"
+					>Pro<b class="bold">tips</b>
 					<span class="brand-logo--square"></span>
 				</a>
 				<div class="nav__menu">
@@ -665,21 +77,18 @@
 						class="form__input"
 						type="text"
 						name="login"
-						placeholder="Login"
-					/>
+						placeholder="Login" />
 					<input
 						class="form__input"
 						type="password"
 						name="password"
-						placeholder="Password"
-					/>
+						placeholder="Password" />
 					<a class="form-sign-in__link" href="#">Forget password?</a>
 					<input
 						class="button button--accent form__button"
 						type="submit"
 						name="submit"
-						value="Log in"
-					/>
+						value="Log in" />
 				</form>
 				<div class="form-footer">
 					<p class="form-footer__text">Don't have an account?</p>
@@ -694,32 +103,27 @@
 						class="form__input"
 						type="email"
 						name="email"
-						placeholder="E-mail"
-					/>
+						placeholder="E-mail" />
 					<input
 						class="form__input"
 						type="text"
 						name="name"
-						placeholder="Full Name"
-					/>
+						placeholder="Full Name" />
 					<input
 						class="form__input"
 						type="text"
 						name="login"
-						placeholder="Login"
-					/>
+						placeholder="Login" />
 					<input
 						class="form__input"
 						type="password"
 						name="password"
-						placeholder="Password"
-					/>
+						placeholder="Password" />
 					<input
 						class="button button--accent form__button"
 						type="button"
 						name="submit"
-						value="Sign up"
-					/>
+						value="Sign up" />
 				</form>
 			</div>
 		</div>
@@ -760,15 +164,13 @@
 									height="65"
 									viewBox="0 0 65 65"
 									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
+									xmlns="http://www.w3.org/2000/svg" >
 									<g filter="url(#filter0_d)">
 										<path
 											fill-rule="evenodd"
 											clip-rule="evenodd"
 											d="M40.0557 24.0279C43.741 25.8705 43.741 31.1295 40.0557 32.9721L11.2361 47.382C7.91156 49.0442 4 46.6267 4 42.9098V14.0902C4 10.3733 7.91156 7.95578 11.2361 9.61803L40.0557 24.0279Z"
-											fill="white"
-										/>
+											fill="white" />
 									</g>
 									<defs>
 										<filter
@@ -778,39 +180,34 @@
 											width="64.8197"
 											height="64.8326"
 											filterUnits="userSpaceOnUse"
-											color-interpolation-filters="sRGB"
-										>
+											color-interpolation-filters="sRGB">
 											<feFlood flood-opacity="0" result="BackgroundImageFix" />
 											<feColorMatrix
 												in="SourceAlpha"
 												type="matrix"
-												values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-											/>
+												values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
 											<feOffset dx="9" dy="4" />
 											<feGaussianBlur stdDeviation="6.5" />
 											<feColorMatrix
 												type="matrix"
-												values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.127868 0"
-											/>
+												values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.127868 0" />
 											<feBlend
 												mode="normal"
 												in2="BackgroundImageFix"
-												result="effect1_dropShadow"
-											/>
+												result="effect1_dropShadow" />
 											<feBlend
 												mode="normal"
 												in="SourceGraphic"
 												in2="effect1_dropShadow"
-												result="shape"
-											/>
+												result="shape" />
 										</filter>
 									</defs>
 								</svg>
 							</button>
 							<picture>
 								<source srcset="img/Media.webp" type="image/webp" />
-								<img class="hero__img" src="img/Media.png" alt="Hero video" />
-							</picture>
+                                <img class="hero__img" src="img/Media.png" alt="Hero video" />
+                            </picture>
 						</div>
 						<!-- /.hero__media -->
 					</div>
@@ -823,14 +220,12 @@
 					height="614"
 					viewBox="0 0 757 614"
 					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-				>
+					xmlns="http://www.w3.org/2000/svg">
 					<path
 						fill-rule="evenodd"
 						clip-rule="evenodd"
 						d="M596 610C820.5 644 1163 388.752 1163 140.5C1163 -107.752 900.863 -309 577.5 -309C254.137 -309 -176.746 41 77.877 265C332.5 489 371.5 576 596 610Z"
-						fill="#FF4F4F"
-					/>
+						fill="#FF4F4F" />
 				</svg>
 			</section>
 			<!-- /.hero -->
@@ -841,8 +236,8 @@
 						<div class="feature__icon feature__icon--outline">
 							<picture>
 								<source srcset="img/Icons/Atlas.svg" type="image/webp" />
-								<img src="img/Icons/Atlas.svg" alt="" />
-							</picture>
+                                <img src="img/Icons/Atlas.svg" alt="" />
+                            </picture>
 						</div>
 						<h3 class="feature__title bold">First click tests</h3>
 						<p class="feature__text">
@@ -854,8 +249,8 @@
 						<div class="feature__icon feature__icon--fill">
 							<picture>
 								<source srcset="img/Icons/Danger.svg" type="image/webp" />
-								<img src="img/Icons/Danger.svg" alt="" />
-							</picture>
+                                <img src="img/Icons/Danger.svg" alt="" />
+                            </picture>
 						</div>
 						<h3 class="feature__title bold">Design surveys</h3>
 						<p class="feature__text">
@@ -881,10 +276,9 @@
 							<picture>
 								<source
 									srcset="img/Icons/User-Astronaut.svg"
-									type="image/webp"
-								/>
-								<img src="img/Icons/User-Astronaut.svg" alt="" />
-							</picture>
+									type="image/webp" />
+                                <img src="img/Icons/User-Astronaut.svg" alt="" />
+                            </picture>
 						</div>
 						<h3 class="feature__title bold">User astronaut</h3>
 						<p class="feature__text">
@@ -903,8 +297,8 @@
 						<div class="about__img image-wrapper">
 							<picture>
 								<source srcset="img/Illustrator.webp" type="image/webp" />
-								<img src="img/Illustrator.png" alt="" />
-							</picture>
+                                <img src="img/Illustrator.png" alt="" />
+                            </picture>
 						</div>
 					</div>
 					<!-- /.about__column -->
@@ -929,8 +323,8 @@
 								<li class="list__item">What S Under Your Grill</li>
 							</ul>
 							<a class="about__button button button--fill" href="#">
-								Know more
-							</a>
+                                Know more
+                            </a>
 							<button class="play-video-link button">
 								Watch Video
 								<i class="fas fa-play"></i>
@@ -957,15 +351,14 @@
 										<picture>
 											<source
 												srcset="img/Testimonials/Picture_1.webp"
-												type="image/webp"
-											/>
+												type="image/webp" />
 											<img src="img/Testimonials/Picture_1.png" alt="" />
 										</picture>
 									</a>
 									<a class="card__title link" href="#">John Doe</a>
 									<h3 class="card__subtitle">CEO, PrettyDopeDesigns</h3>
 									<q class="card__quote">
-										When To Use High Heat On Your Barbeque, What S Under Your
+                                        When To Use High Heat On Your Barbeque, What S Under Your
 										Grill
 									</q>
 								</div>
@@ -976,15 +369,14 @@
 										<picture>
 											<source
 												srcset="img/Testimonials/Picture_1.webp"
-												type="image/webp"
-											/>
+												type="image/webp" />
 											<img src="img/Testimonials/Picture_1.png" alt="" />
 										</picture>
 									</a>
 									<a class="card__title link" href="#">John Doe</a>
 									<h3 class="card__subtitle">CEO, PrettyDopeDesigns</h3>
 									<q class="card__quote">
-										When To Use High Heat On Your Barbeque, What S Under Your
+                                        When To Use High Heat On Your Barbeque, What S Under Your
 										Grill
 									</q>
 								</div>
@@ -995,15 +387,14 @@
 										<picture>
 											<source
 												srcset="img/Testimonials/Picture_1.webp"
-												type="image/webp"
-											/>
+												type="image/webp" />
 											<img src="img/Testimonials/Picture_1.png" alt="" />
 										</picture>
 									</a>
 									<a class="card__title link" href="#">John Doe</a>
 									<h3 class="card__subtitle">CEO, PrettyDopeDesigns</h3>
 									<q class="card__quote">
-										When To Use High Heat On Your Barbeque, What S Under Your
+                                        When To Use High Heat On Your Barbeque, What S Under Your
 										Grill
 									</q>
 								</div>
@@ -1041,9 +432,9 @@
 									</p>
 									<p class="card__text">
 										<a class="link--underlined" href="#">
-											And part of that is the desire to instill
-										</a>
-										in our children the love of science, of learning and
+                                            And part of that is the desire to instill
+                                        </a>
+                                        in our children the love of science, of learning and
 										particularly the love of nature.
 									</p>
 								</div>
@@ -1056,8 +447,8 @@
 								<div class="card__icon">
 									<picture>
 										<source srcset="img/Icons/Hands.svg" type="image/webp" />
-										<img src="img/Icons/Hands.svg" alt="icon" />
-									</picture>
+                                        <img src="img/Icons/Hands.svg" alt="icon" />
+                                    </picture>
 								</div>
 								<div class="card__body">
 									<h2 class="card__title">What’s up with the name?</h2>
@@ -1097,8 +488,8 @@
 										<img class="post__img" src="img/Posts/Post_1.png" alt="" />
 									</picture>
 									<a href="#" class="post__title link">
-										Upgrading To Microsoft Windows Vista Tips
-									</a>
+                                        Upgrading To Microsoft Windows Vista Tips
+                                    </a>
 									<!-- /.post__title link -->
 									<div class="post-author">
 										<p class="post-author__text">By <b>Abul Hasan Milon</b></p>
@@ -1132,8 +523,8 @@
 										<img class="post__img" src="img/Posts/Post_3.png" alt="" />
 									</picture>
 									<a href="#" class="post__title link">
-										The Universe Through A Child S Eyes
-									</a>
+                                        The Universe Through A Child S Eyes
+                                    </a>
 									<!-- /.post__title link -->
 									<div class="post-author">
 										<p class="post-author__text">By <b>Speed Smith</b></p>
@@ -1149,8 +540,8 @@
 										<img class="post__img" src="img/Posts/Post_1.png" alt="" />
 									</picture>
 									<a href="#" class="post__title link">
-										Upgrading To Microsoft Windows Vista Tips
-									</a>
+                                        Upgrading To Microsoft Windows Vista Tips
+                                    </a>
 									<!-- /.post__title link -->
 									<div class="post-author">
 										<p class="post-author__text">By <b>Abul Hasan Milon</b></p>
@@ -1184,8 +575,8 @@
 										<img class="post__img" src="img/Posts/Post_3.png" alt="" />
 									</picture>
 									<a href="#" class="post__title link">
-										The Universe Through A Child S Eyes
-									</a>
+                                        The Universe Through A Child S Eyes
+                                    </a>
 									<!-- /.post__title link -->
 									<div class="post-author">
 										<p class="post-author__text">By <b>Speed Smith</b></p>
@@ -1193,16 +584,16 @@
 									</div>
 								</div>
 							</li>
-							<!-- /.list__item post -->
-							<li>
+                            <!-- /.list__item post -->
+                            <li>
 								<div class="post">
 									<picture>
 										<source srcset="img/Posts/Post_1.webp" type="image/webp" />
 										<img class="post__img" src="img/Posts/Post_1.png" alt="" />
 									</picture>
 									<a href="#" class="post__title link">
-										Upgrading To Microsoft Windows Vista Tips
-									</a>
+                                        Upgrading To Microsoft Windows Vista Tips
+                                    </a>
 									<!-- /.post__title link -->
 									<div class="post-author">
 										<p class="post-author__text">By <b>Abul Hasan Milon</b></p>
@@ -1236,8 +627,8 @@
 										<img class="post__img" src="img/Posts/Post_3.png" alt="" />
 									</picture>
 									<a href="#" class="post__title link">
-										The Universe Through A Child S Eyes
-									</a>
+                                        The Universe Through A Child S Eyes
+                                    </a>
 									<!-- /.post__title link -->
 									<div class="post-author">
 										<p class="post-author__text">By <b>Speed Smith</b></p>
@@ -1268,8 +659,7 @@
 							<input
 								class="subscribe__input"
 								type="email"
-								placeholder="Enter your email"
-							/>
+								placeholder="Enter your email" />
 							<!--    <input class = "subscribe__submit" type = "submit" value      = ""> -->
 							<button class="subscribe__button form__button button">
 								<svg
@@ -1278,14 +668,12 @@
 									height="34"
 									viewBox="0 0 34 34"
 									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
+									xmlns="http://www.w3.org/2000/svg">
 									<path
 										fill-rule="evenodd"
 										clip-rule="evenodd"
 										d="M9.92286 21.8843C7.74928 20.5923 0 15.9375 0 15.9375C0 15.9375 30.3006 1.26863 32.9169 0L9.92286 21.8843ZM16.9894 34C16.9894 34 12.4691 25.7178 11.0505 23.1094L34 0.966875L33.9788 1.0625C33.7133 1.59375 16.9894 34 16.9894 34Z"
-										fill="white"
-									/>
+										fill="white" />
 								</svg>
 							</button>
 						</form>
