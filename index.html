@@ -18,16 +18,34 @@
 			type="font/woff"
 			crossorigin="anonymous"
 		/>
+
 		<link
 			type="text/css"
-			rel="stylesheet"
+			rel="preload"
+			as="style"
 			href="slick/slick.css"
+			onload="this.load=null;this.rel='stylesheet'"
 		/>
 		<link
 			type="text/css"
-			rel="stylesheet"
+			rel="preload"
+			as="style"
 			href="slick/slick-theme.css"
+			onload="this.load=null;this.rel='stylesheet'"
 		/>
+		
+		<noscript>
+			<link
+				type="text/css"
+				rel="stylesheet"
+				href="slick/slick.css"
+			/>
+			<link
+				type="text/css"
+				rel="stylesheet"
+				href="slick/slick-theme.css"
+			/>
+		</noscript>
 
 		<!-- Normalize -->
 		<style type="text/css">
