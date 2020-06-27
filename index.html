@@ -130,12 +130,11 @@
 			(function(a){if(!a.loadCSS){a.loadCSS=function(){}}var b=loadCSS.relpreload={};b.support=(function(){var d;try{d=a.document.createElement("link").relList.supports("preload")}catch(f){d=false}return function(){return d}})();b.bindMediaToggle=function(e){var f=e.media||"all";function d(){e.media=f}if(e.addEventListener){e.addEventListener("load",d)}else{if(e.attachEvent){e.attachEvent("onload",d)}}setTimeout(function(){e.rel="stylesheet";e.media="only x"});setTimeout(d,3000)};b.poly=function(){if(b.support()){return}var d=a.document.getElementsByTagName("link");for(var e=0;e<d.length;e++){var f=d[e];if(f.rel==="preload"&&f.getAttribute("as")==="style"&&!f.getAttribute("data-loadcss")){f.setAttribute("data-loadcss",true);b.bindMediaToggle(f)}}};if(!b.support()){b.poly();var c=a.setInterval(b.poly,500);if(a.addEventListener){a.addEventListener("load",function(){b.poly();a.clearInterval(c)})}else{if(a.attachEvent){a.attachEvent("onload",function(){b.poly();a.clearInterval(c)})}}}if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{a.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));
 		</script>
 	</head>
-
 	<body>
 		<header class="header container">
 			<nav class="nav row">
-				<a href="#" class="brand-logo"
-					>Pro<b class="bold">tips</b>
+				<a href="#" class="brand-logo">
+					Pro<b class="bold">tips</b>
 					<span class="brand-logo--square"></span>
 				</a>
 				<div class="nav__menu">
@@ -414,17 +413,17 @@
 								<span class="brand-logo--square"></span>
 							</h3>
 							<h2 class="about__title">Learn with Protips</h2>
-							<ul class="about__list list">
-								<li class="list__item">Beyond The Naked Eye</li>
-								<li class="list__item">Make Grilling A Healthy Experience</li>
-								<li class="list__item">Make Sure Your Ice Is Safe And Clean</li>
-								<li class="list__item">
+							<ul class="about__list">
+								<li class="about__list-item">Beyond The Naked Eye</li>
+								<li class="about__list-item">Make Grilling A Healthy Experience</li>
+								<li class="about__list-item">Make Sure Your Ice Is Safe And Clean</li>
+								<li class="about__list-item">
 									Peace On Earth A Wonderful Wish But No Way
 								</li>
-								<li class="list__item">
+								<li class="about__list-item">
 									Get Best Advertiser In Your Side Pocket
 								</li>
-								<li class="list__item">What S Under Your Grill</li>
+								<li class="about__list-item">What S Under Your Grill</li>
 							</ul>
 							<a class="about__button button button--fill" href="#">
                                 Know more
@@ -448,10 +447,10 @@
 						Lorem ipsum, dolor sit amet consectetur adipisicing elit.
 					</h3>
 					<div class="testimonials">
-						<ul class="testimonials__list list">
-							<li class="list__item">
-								<div class="testimonial__card card">
-									<a class="card__image link" href="#">
+						<ul class="testimonials__list">
+							<li class="testimonials__list-item">
+								<div class="testimonial__card">
+									<a class="testimonial__card-image link" href="#">
 										<picture>
 											<source
 												srcset="img/Testimonials/Picture_1.webp"
@@ -459,17 +458,17 @@
 											<img src="img/Testimonials/Picture_1.png" alt="" />
 										</picture>
 									</a>
-									<a class="card__title link" href="#">John Doe</a>
-									<h3 class="card__subtitle">CEO, PrettyDopeDesigns</h3>
-									<q class="card__quote">
+									<a class="testimonial__card-title link" href="#">John Doe</a>
+									<h3 class="testimonial__card-subtitle">CEO, PrettyDopeDesigns</h3>
+									<q class="testimonial__card-quote">
                                         When To Use High Heat On Your Barbeque, What S Under Your
 										Grill
 									</q>
 								</div>
 							</li>
-							<li class="list__item">
-								<div class="testimonial__card card">
-									<a class="card__image link" href="#">
+							<li class="testimonials__list-item">
+								<div class="testimonial__card">
+									<a class="testimonial__card-image link" href="#">
 										<picture>
 											<source
 												srcset="img/Testimonials/Picture_1.webp"
@@ -477,17 +476,17 @@
 											<img src="img/Testimonials/Picture_1.png" alt="" />
 										</picture>
 									</a>
-									<a class="card__title link" href="#">John Doe</a>
-									<h3 class="card__subtitle">CEO, PrettyDopeDesigns</h3>
-									<q class="card__quote">
+									<a class="testimonial__card-title link" href="#">John Doe</a>
+									<h3 class="testimonial__card-subtitle">CEO, PrettyDopeDesigns</h3>
+									<q class="testimonial__card-quote">
                                         When To Use High Heat On Your Barbeque, What S Under Your
 										Grill
 									</q>
 								</div>
 							</li>
-							<li class="list__item">
-								<div class="testimonial__card card">
-									<a class="card__image link" href="#">
+							<li class="testimonials__list-item">
+								<div class="testimonial__card">
+									<a class="testimonial__card-image link" href="#">
 										<picture>
 											<source
 												srcset="img/Testimonials/Picture_1.webp"
@@ -495,9 +494,9 @@
 											<img src="img/Testimonials/Picture_1.png" alt="" />
 										</picture>
 									</a>
-									<a class="card__title link" href="#">John Doe</a>
-									<h3 class="card__subtitle">CEO, PrettyDopeDesigns</h3>
-									<q class="card__quote">
+									<a class="testimonial__card-title link" href="#">John Doe</a>
+									<h3 class="testimonial__card-subtitle">CEO, PrettyDopeDesigns</h3>
+									<q class="testimonial__card-quote">
                                         When To Use High Heat On Your Barbeque, What S Under Your
 										Grill
 									</q>
@@ -520,21 +519,21 @@
 					</h3>
 					<div class="story__row row">
 						<div class="story__column">
-							<div class="story__card card">
-								<div class="card__icon">
+							<div class="story__card">
+								<div class="story__card-icon">
 									<picture>
 										<source srcset="img/Icons/Birds.svg" type="image/webp" />
 										<img src="img/Icons/Birds.svg" alt="Who are we?" />
 									</picture>
 								</div>
-								<div class="card__body">
-									<h2 class="card__title">Who are we?</h2>
-									<p class="card__text">
+								<div class="story__card-body">
+									<h2 class="story__card-title">Who are we?</h2>
+									<p class="story__card-text">
 										There is something about parenthood that gives us a sense of
 										history and a deeply rooted desire to send on into the next
 										generation the great things we have discovered about life.
 									</p>
-									<p class="card__text">
+									<p class="story__card-text">
 										<a class="link--underlined" href="#">
                                             And part of that is the desire to instill
                                         </a>
@@ -547,16 +546,16 @@
 						</div>
 						<!-- /.story__column -->
 						<div class="story__column">
-							<div class="story__card card">
-								<div class="card__icon">
+							<div class="story__card">
+								<div class="story__card-icon">
 									<picture>
 										<source srcset="img/Icons/Hands.svg" type="image/webp" />
                                         <img src="img/Icons/Hands.svg" alt="icon" />
                                     </picture>
 								</div>
-								<div class="card__body">
-									<h2 class="card__title">What’s up with the name?</h2>
-									<p class="card__text">
+								<div class="story__card-body">
+									<h2 class="story__card-title">What’s up with the name?</h2>
+									<p class="story__card-text">
 										There are advances being made in science and technology
 										everyday, and a good example of this is the LCD monitor. LCD
 										monitors have several benefits over the old chunky
@@ -586,12 +585,12 @@
 					<div class="blog-feed">
 						<ul class="blog-feed__list">
 							<li>
-								<div class="post">
+								<div class="blog-feed__post">
 									<picture>
 										<source srcset="img/Posts/Post_1.webp" type="image/webp" />
-										<img class="post__img" src="img/Posts/Post_1.png" alt="" />
+										<img class="blog-feed__post-img" src="img/Posts/Post_1.png" alt="" />
 									</picture>
-									<a href="#" class="post__title link">
+									<a href="#" class="blog-feed__post-title link">
                                         Upgrading To Microsoft Windows Vista Tips
                                     </a>
 									<!-- /.post__title link -->
@@ -603,12 +602,12 @@
 							</li>
 							<!-- /.list__item post -->
 							<li>
-								<div class="post">
+								<div class="blog-feed__post">
 									<picture>
 										<source srcset="img/Posts/Post_2.webp" type="image/webp" />
-										<img class="post__img" src="img/Posts/Post_2.png" alt="" />
+										<img class="blog-feed__post-img" src="img/Posts/Post_2.png" alt="" />
 									</picture>
-									<a href="#" class="post__title link link--active">
+									<a href="#" class="blog-feed__post-title link link--active">
 										Finally A Top Secret Way You Can Get Google Adwords Pay Per
 										Clicks Free
 									</a>
@@ -621,12 +620,12 @@
 							</li>
 							<!-- /.list__item post -->
 							<li>
-								<div class="post">
+								<div class="blog-feed__post">
 									<picture>
 										<source srcset="img/Posts/Post_3.webp" type="image/webp" />
-										<img class="post__img" src="img/Posts/Post_3.png" alt="" />
+										<img class="blog-feed__post-img" src="img/Posts/Post_3.png" alt="" />
 									</picture>
-									<a href="#" class="post__title link">
+									<a href="#" class="blog-feed__post-title link">
                                         The Universe Through A Child S Eyes
                                     </a>
 									<!-- /.post__title link -->
@@ -638,12 +637,12 @@
 							</li>
 							<!-- /.list__item post -->
 							<li>
-								<div class="post">
+								<div class="blog-feed__post">
 									<picture>
 										<source srcset="img/Posts/Post_1.webp" type="image/webp" />
-										<img class="post__img" src="img/Posts/Post_1.png" alt="" />
+										<img class="blog-feed__post-img" src="img/Posts/Post_1.png" alt="" />
 									</picture>
-									<a href="#" class="post__title link">
+									<a href="#" class="blog-feed__post-title link">
                                         Upgrading To Microsoft Windows Vista Tips
                                     </a>
 									<!-- /.post__title link -->
@@ -655,12 +654,12 @@
 							</li>
 							<!-- /.list__item post -->
 							<li>
-								<div class="post">
+								<div class="blog-feed__post">
 									<picture>
 										<source srcset="img/Posts/Post_2.webp" type="image/webp" />
-										<img class="post__img" src="img/Posts/Post_2.png" alt="" />
+										<img class="blog-feed__post-img" src="img/Posts/Post_2.png" alt="" />
 									</picture>
-									<a href="#" class="post__title link link--active">
+									<a href="#" class="blog-feed__post-title link link--active">
 										Finally A Top Secret Way You Can Get Google Adwords Pay Per
 										Clicks Free
 									</a>
@@ -673,12 +672,12 @@
 							</li>
 							<!-- /.list__item post -->
 							<li>
-								<div class="post">
+								<div class="blog-feed__post">
 									<picture>
 										<source srcset="img/Posts/Post_3.webp" type="image/webp" />
-										<img class="post__img" src="img/Posts/Post_3.png" alt="" />
+										<img class="blog-feed__post-img" src="img/Posts/Post_3.png" alt="" />
 									</picture>
-									<a href="#" class="post__title link">
+									<a href="#" class="blog-feed__post-title link">
                                         The Universe Through A Child S Eyes
                                     </a>
 									<!-- /.post__title link -->
@@ -690,12 +689,12 @@
 							</li>
                             <!-- /.list__item post -->
                             <li>
-								<div class="post">
+								<div class="blog-feed__post">
 									<picture>
 										<source srcset="img/Posts/Post_1.webp" type="image/webp" />
-										<img class="post__img" src="img/Posts/Post_1.png" alt="" />
+										<img class="blog-feed__post-img" src="img/Posts/Post_1.png" alt="" />
 									</picture>
-									<a href="#" class="post__title link">
+									<a href="#" class="blog-feed__post-title link">
                                         Upgrading To Microsoft Windows Vista Tips
                                     </a>
 									<!-- /.post__title link -->
@@ -707,12 +706,12 @@
 							</li>
 							<!-- /.list__item post -->
 							<li>
-								<div class="post">
+								<div class="blog-feed__post">
 									<picture>
 										<source srcset="img/Posts/Post_2.webp" type="image/webp" />
-										<img class="post__img" src="img/Posts/Post_2.png" alt="" />
+										<img class="blog-feed__post-img" src="img/Posts/Post_2.png" alt="" />
 									</picture>
-									<a href="#" class="post__title link link--active">
+									<a href="#" class="blog-feed__post-title link link--active">
 										Finally A Top Secret Way You Can Get Google Adwords Pay Per
 										Clicks Free
 									</a>
@@ -725,12 +724,12 @@
 							</li>
 							<!-- /.list__item post -->
 							<li>
-								<div class="post">
+								<div class="blog-feed__post">
 									<picture>
 										<source srcset="img/Posts/Post_3.webp" type="image/webp" />
-										<img class="post__img" src="img/Posts/Post_3.png" alt="" />
+										<img class="blog-feed__post-img" src="img/Posts/Post_3.png" alt="" />
 									</picture>
-									<a href="#" class="post__title link">
+									<a href="#" class="blog-feed__post-title link">
                                         The Universe Through A Child S Eyes
                                     </a>
 									<!-- /.post__title link -->
@@ -759,7 +758,7 @@
 					</div>
 					<!-- /.subscribe__column -->
 					<div class="subscribe__column column">
-						<form class="form">
+						<form class="subscribe__form">
 							<input
 								class="subscribe__input"
 								type="email"
