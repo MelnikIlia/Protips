@@ -322,7 +322,7 @@
 	display: inline-block;
 	min-width: 24px;
 	min-height: 24px;
-	background: url(../img/Icons/Bullets.svg) center no-repeat;
+	background: url(../img/icons/bullets.svg) center no-repeat;
 	margin-right: 14px
 }
 
@@ -861,4 +861,3 @@
 		height: 100%
 	}
 }
-
