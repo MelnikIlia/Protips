@@ -5,7 +5,6 @@
 	transition: all .3s ease
 }
 
-.button--accent,
 .button--outline:hover {
 	background-color: #2f281e;
 	border-color: #2f281e
@@ -271,6 +270,11 @@
 	transform: rotate(-46deg)
 }
 
+.hero-bg {
+	width: 75%;
+	height: 75%;
+}
+
 .about__title {
 	font-size: 40px;
 	font-weight: 900;
@@ -286,7 +290,7 @@
 	position: relative
 }
 
-.about__subtitle .brand-logo--square {
+.about__subtitle .brand-logo-dot {
 	opacity: 1;
 	right: -20%
 }
@@ -662,11 +666,6 @@
 	.nav__list-item:last-child {
 		margin-right: 0
 	}
-	.nav__register {
-		-webkit-box-flex: 0;
-		-ms-flex: 0 0 40.9009009009009%;
-		flex: 0 0 40.9009009009009%
-	}
 	.register__button {
 		margin: 0
 	}
@@ -780,6 +779,9 @@
 	}
 	.subscribe__title {
 		margin-bottom: 20px
+	}
+	.hero__media {
+		margin-top: 20px;
 	}
 }
 
