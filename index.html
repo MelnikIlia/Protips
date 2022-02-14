@@ -1,886 +1,715 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-		<title>Protips</title>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="description" content="А training project to learn how to do quality web layout">
 
-		<!-- Required additional / cdn -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<title>Protips</title>
 
-		<!-- Slick slider -->
-		<link
-			rel="preload"
-			as="font"
-			href="slick/fonts/slick.woff"
-			type="font/woff"
-			crossorigin="anonymous"
-		/>
+	<!-- Required additional / cdn -->
 
-		<link
-			type="text/css"
-			rel="preload"
-			as="style"
-			href="slick/slick.css"
-			onload="this.load=null;this.rel='stylesheet'"
-		/>
+	<link type="text/css" rel="preload" as="style" href="lib/swiper.min.css"
+		onload="this.load=null;this.rel='stylesheet'" />
 
-		<link
-			type="text/css"
-			rel="preload"
-			as="style"
-			href="slick/slick-theme.css"
-			onload="this.load=null;this.rel='stylesheet'"
-		/>
+	<!-- Normalize -->
+	<style>
+		/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{-webkit-box-sizing:content-box;box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{-webkit-box-sizing:border-box;box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{-webkit-box-sizing:border-box;box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
+	</style>
 
-		<noscript>
-			<link
-				type="text/css"
-				rel="stylesheet"
-				href="slick/slick.css"
-			/>
+	<!-- Reset -->
+	<style>
+		/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 | License: none (public domain) */
+		a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}a{text-decoration:none}b,strong{font-weight:900}
+	</style>
 
-			<link
-				type="text/css"
-				rel="stylesheet"
-				href="slick/slick-theme.css"
-			/>
-		</noscript>
+	<!-- Fonts -->
+	<link rel="preload" as="font" href="fonts/Poppins-Regular.woff" type="font/woff" crossorigin="anonymous" />
+	<link rel="preload" as="font" href="fonts/Poppins-Regular.woff2" type="font/woff" crossorigin="anonymous" />
+	<link rel="preload" as="font" href="fonts/Poppins-Bold.woff" type="font/woff" crossorigin="anonymous" />
+	<link rel="preload" as="font" href="fonts/Poppins-Bold.woff2" type="font/woff" crossorigin="anonymous" />
 
-		<!-- Normalize -->
-		<link
-			type="text/css"
-			rel="stylesheet"
-			href="css/normalize.css"
-		/>
-		
-		<!-- Reset -->
-		<link
-			type="text/css"
-			rel="stylesheet"
-			href="css/reset.css"
-		/>
-		
-		<!-- Fonts -->
-		<link
-			rel="preload"
-			as="font"
-			href="fonts/Poppins-Regular.woff"
-			type="font/woff"
-			crossorigin="anonymous"
-		/>
-		<link
-			rel="preload"
-			as="font"
-			href="fonts/Poppins-Regular.woff2"
-			type="font/woff"
-			crossorigin="anonymous"
-		/>
-		<link
-			rel="preload"
-			as="font"
-			href="fonts/Poppins-Bold.woff"
-			type="font/woff"
-			crossorigin="anonymous"
-		/>
-		<link
-			rel="preload"
-			as="font"
-			href="fonts/Poppins-Bold.woff2"
-			type="font/woff"
-			crossorigin="anonymous"
-		/>
+	<link type="text/css" rel="preload" as="style" href="css/fonts.css" onload="this.load=null;this.rel='stylesheet'" />
 
-		<link
-			type="text/css"
-			rel="preload"
-			as="style"
-			href="css/fonts.css"
-			onload="this.load=null;this.rel='stylesheet'"
-		/>
+	<!-- Critical CSS -->
+	<link type="text/css" rel="stylesheet" href="css/critical_styles.min.css" />
 
-		<noscript>
-			<link
-				type="text/css"
-				rel="stylesheet"
-				href="css/fonts.css"
-			/>
-		</noscript>
+	<link type="text/css" rel="preload" as="style" href="css/style.min.css"
+		onload="this.load=null;this.rel='stylesheet'" />
 
-		<!-- Critical CSS -->
-		<link
-			type="text/css"
-			rel="stylesheet"
-			href="css/critical_styles.css"
-		/>
+	<noscript>
+		<link type="text/css" rel="stylesheet" href="css/fonts.css" />
+		<link type="text/css" rel="stylesheet" href="css/style.min.css" />
+		<link type="text/css" rel="stylesheet" href="lib/swiper.min.css" />
+	</noscript>
 
-		<link
-			type="text/css"
-			rel="preload"
-			as="style"
-			href="css/style.min.css"
-			onload="this.load=null;this.rel='stylesheet'"
-		/>
+	<script>
+		/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+		(function(e){if(!e.loadCSS){e.loadCSS=function(){}}var d=loadCSS.relpreload={};d.support=(function(){var b;try{b=e.document.createElement("link").relList.supports("preload")}catch(a){b=false}return function(){return b}})();d.bindMediaToggle=function(b){var a=b.media||"all";function c(){b.media=a}if(b.addEventListener){b.addEventListener("load",c)}else{if(b.attachEvent){b.attachEvent("onload",c)}}setTimeout(function(){b.rel="stylesheet";b.media="only x"});setTimeout(c,3000)};d.poly=function(){if(d.support()){return}var c=e.document.getElementsByTagName("link");for(var b=0;b<c.length;b++){var a=c[b];if(a.rel==="preload"&&a.getAttribute("as")==="style"&&!a.getAttribute("data-loadcss")){a.setAttribute("data-loadcss",true);d.bindMediaToggle(a)}}};if(!d.support()){d.poly();var f=e.setInterval(d.poly,500);if(e.addEventListener){e.addEventListener("load",function(){d.poly();e.clearInterval(f)})}else{if(e.attachEvent){e.attachEvent("onload",function(){d.poly();e.clearInterval(f)})}}}if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{e.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));
+	</script>
+</head>
 
-		<noscript>
-			<link
-				type="text/css"
-				rel="stylesheet"
-				href="css/style.min.css"
-			/>
-		</noscript>
-
-		<script>
-			/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
-			(function(a){if(!a.loadCSS){a.loadCSS=function(){}}var b=loadCSS.relpreload={};b.support=(function(){var d;try{d=a.document.createElement("link").relList.supports("preload")}catch(f){d=false}return function(){return d}})();b.bindMediaToggle=function(e){var f=e.media||"all";function d(){e.media=f}if(e.addEventListener){e.addEventListener("load",d)}else{if(e.attachEvent){e.attachEvent("onload",d)}}setTimeout(function(){e.rel="stylesheet";e.media="only x"});setTimeout(d,3000)};b.poly=function(){if(b.support()){return}var d=a.document.getElementsByTagName("link");for(var e=0;e<d.length;e++){var f=d[e];if(f.rel==="preload"&&f.getAttribute("as")==="style"&&!f.getAttribute("data-loadcss")){f.setAttribute("data-loadcss",true);b.bindMediaToggle(f)}}};if(!b.support()){b.poly();var c=a.setInterval(b.poly,500);if(a.addEventListener){a.addEventListener("load",function(){b.poly();a.clearInterval(c)})}else{if(a.attachEvent){a.attachEvent("onload",function(){b.poly();a.clearInterval(c)})}}}if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{a.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));
-		</script>
-	</head>
-	<body>
-		<header class="header container">
-			<nav class="nav row">
-				<a href="#" class="brand-logo">
-					Pro<b class="bold">tips</b>
-					<span class="brand-logo-dot"></span>
-				</a>
-				<div class="nav__menu">
-					<ul class="nav__list">
-						<li class="nav__list-item">
-							<a class="nav__link" href="#Home">Home</a>
-						</li>
-						<li class="nav__list-item">
-							<a class="nav__link" href="#About">About</a>
-						</li>
-						<li class="nav__list-item">
-							<a class="nav__link" href="#Pricing">Pricing</a>
-						</li>
-						<li class="nav__list-item">
-							<a class="nav__link" href="#Contact">Contact</a>
-						</li>
-					</ul>
-					<!-- /.nav__list -->
-					<div class="nav__register register">
-						<button class="register__button button button--outline" id="signIn">
-							Sign In
-						</button>
-						<button class="register__button button button--outline" id="signUp">
-							Sign Up
-						</button>
-					</div>
-					<!-- /.nav__register -->
+<body>
+	<header class="header container">
+		<nav class="nav row">
+			<a href="#" class="brand-logo">
+				Pro<b class="bold">tips</b>
+				<span class="brand-logo-dot"></span>
+			</a>
+			<div class="nav__menu">
+				<ul class="nav__list">
+					<li class="nav__list-item">
+						<a class="nav__link" href="#Home">Home</a>
+					</li>
+					<li class="nav__list-item">
+						<a class="nav__link" href="#About">About</a>
+					</li>
+					<li class="nav__list-item">
+						<a class="nav__link" href="#Pricing">Pricing</a>
+					</li>
+					<li class="nav__list-item">
+						<a class="nav__link" href="#Contact">Contact</a>
+					</li>
+				</ul>
+				<!-- /.nav__list -->
+				<div class="nav__register register">
+					<button class="register__button button button--outline" id="signIn" role="button" aria-label="Sign In" >
+						Sign In
+					</button>
+					<button class="register__button button button--outline" id="signUp" role="button" aria-label="Sign Up" >
+						Sign Up
+					</button>
 				</div>
-				<button class="button--burger-menu button" id="button-burger">
-					<span></span>
-				</button>
-				<!-- /.nav__menu -->
-			</nav>
-			<!-- /.nav -->
-		</header>
-
-		<div class="modal-register">
-			<div class="form-sign-in">
-				<span class="modal-close"></span>
-				<h2 class="form__title">Welcome</h2>
-				<form class="form">
-					<input
-						class="form__input"
-						type="text"
-						name="login"
-						placeholder="Login" />
-					<input
-						class="form__input"
-						type="password"
-						name="password"
-						placeholder="Password" />
-					<a class="form-sign-in__link" href="#">Forget password?</a>
-					<input
-						class="button button--accent form__button"
-						type="submit"
-						name="submit"
-						value="Log in" />
-				</form>
-				<div class="form-footer">
-					<p class="form-footer__text">Don't have an account?</p>
-					<a class="form-sign-in__link" href="#">Sign up</a>
-				</div>
+				<!-- /.nav__register -->
 			</div>
-			<div class="form-sign-up">
-				<span class="modal-close"></span>
-				<h2 class="form__title">Sign Up</h2>
-				<form class="form">
-					<input
-						class="form__input"
-						type="email"
-						name="email"
-						placeholder="E-mail" />
-					<input
-						class="form__input"
-						type="text"
-						name="name"
-						placeholder="Full Name" />
-					<input
-						class="form__input"
-						type="text"
-						name="login"
-						placeholder="Login" />
-					<input
-						class="form__input"
-						type="password"
-						name="password"
-						placeholder="Password" />
-					<input
-						class="button button--accent form__button"
-						type="button"
-						name="submit"
-						value="Sign up" />
-				</form>
+			<button class="button--burger-menu button" id="button-burger" role="button" aria-label="Menu Button" >
+				<span></span>
+			</button>
+			<!-- /.nav__menu -->
+		</nav>
+		<!-- /.nav -->
+	</header>
+
+	<div class="modal-register">
+		<div class="form-sign-in">
+			<span class="modal-close"></span>
+			<h2 class="form__title">Welcome</h2>
+			<form class="form">
+				<input class="form__input" type="text" name="login" placeholder="Login" />
+				<input class="form__input" type="password" name="password" placeholder="Password" />
+				<a class="form-sign-in__link" href="#">Forget password?</a>
+				<input class="button button--accent form__button" type="submit" name="submit" value="Log in" />
+			</form>
+			<div class="form-footer">
+				<p class="form-footer__text">Don't have an account?</p>
+				<a class="form-sign-in__link" href="#">Sign up</a>
 			</div>
 		</div>
+		<div class="form-sign-up">
+			<span class="modal-close"></span>
+			<h2 class="form__title">Sign Up</h2>
+			<form class="form">
+				<input class="form__input" type="email" name="email" placeholder="E-mail" />
+				<input class="form__input" type="text" name="name" placeholder="Full Name" />
+				<input class="form__input" type="text" name="login" placeholder="Login" />
+				<input class="form__input" type="password" name="password" placeholder="Password" />
+				<input class="button button--accent form__button" type="button" name="submit" value="Sign up" />
+			</form>
+		</div>
+	</div>
 
-		<main class="container">
-			<section class="hero">
-				<div class="hero__row row">
-					<div class="hero__column column">
-						<div class="hero__block">
-							<h1 class="hero__title title">
-								A Guide To <b class="bold">Rocky</b> Mountain Vacations
-							</h1>
-							<p class="hero__text">
-								Maui helicopter tours are a great way to see the island from a
-								different perspective and have a fun adventure. If you have
-								never been on a helicopter before, this is a great place to do
-								it.
-							</p>
-							<a class="hero__button button button--fill" href="#">
-								Get started
-							</a>
-						</div>
-						<!-- /.hero__block -->
-					</div>
-					<!-- /.hero__column -->
-					<div class="hero__column column">
-						<div class="hero__media">
-							<!-- If video
-                            <video>
-                                <source src = "template.mp4" type  = "video/mp4">
-                                <source src = "template.webm" type = "video/webm">
-                            </video> -->
-							<button class="button button--play">
-								<span class="play-oval"></span>
-								<svg
-									class="play-icon"
-									width="65"
-									height="65"
-									viewBox="0 0 65 65"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg" >
-									<g filter="url(#filter0_d)">
-										<path
-											fill-rule="evenodd"
-											clip-rule="evenodd"
-											d="M40.0557 24.0279C43.741 25.8705 43.741 31.1295 40.0557 32.9721L11.2361 47.382C7.91156 49.0442 4 46.6267 4 42.9098V14.0902C4 10.3733 7.91156 7.95578 11.2361 9.61803L40.0557 24.0279Z"
-											fill="white" />
-									</g>
-									<defs>
-										<filter
-											id="filter0_d"
-											x="0"
-											y="0.0837402"
-											width="64.8197"
-											height="64.8326"
-											filterUnits="userSpaceOnUse"
-											color-interpolation-filters="sRGB">
-											<feFlood flood-opacity="0" result="BackgroundImageFix" />
-											<feColorMatrix
-												in="SourceAlpha"
-												type="matrix"
-												values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-											<feOffset dx="9" dy="4" />
-											<feGaussianBlur stdDeviation="6.5" />
-											<feColorMatrix
-												type="matrix"
-												values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.127868 0" />
-											<feBlend
-												mode="normal"
-												in2="BackgroundImageFix"
-												result="effect1_dropShadow" />
-											<feBlend
-												mode="normal"
-												in="SourceGraphic"
-												in2="effect1_dropShadow"
-												result="shape" />
-										</filter>
-									</defs>
-								</svg>
-							</button>
-							<picture>
-								<source srcset="img/media.webp" type="image/webp" />
-                                <img class="hero__img" src="img/media.png" alt="Hero video" />
-                            </picture>
-						</div>
-						<!-- /.hero__media -->
-					</div>
-					<!-- /.hero__column -->
-				</div>
-				<!-- /.hero__row -->
-				<svg
-					class="hero-bg"
-					width="757"
-					height="614"
-					viewBox="0 0 757 614"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg">
-					<path
-						fill-rule="evenodd"
-						clip-rule="evenodd"
-						d="M596 610C820.5 644 1163 388.752 1163 140.5C1163 -107.752 900.863 -309 577.5 -309C254.137 -309 -176.746 41 77.877 265C332.5 489 371.5 576 596 610Z"
-						fill="#FF4F4F" />
-				</svg>
-			</section>
-			<!-- /.hero -->
-
-			<section class="feature">
-				<div class="feature__row row">
-					<div class="feature__column column">
-						<div class="feature__icon feature__icon--outline">
-							<picture>
-								<source srcset="img/icons/atlas.svg" type="image/webp" />
-                                <img src="img/icons/atlas.svg" alt="" />
-                            </picture>
-						</div>
-						<h3 class="feature__title bold">First click tests</h3>
-						<p class="feature__text">
-							While most people enjoy casino gambling,
+	<main class="container">
+		<section class="hero">
+			<div class="hero__row row">
+				<div class="hero__column column">
+					<div class="hero__block">
+						<h1 class="hero__title title">
+							A Guide To <b class="bold">Rocky</b> Mountain Vacations
+						</h1>
+						<p class="hero__text">
+							Maui helicopter tours are a great way to see the island from a
+							different perspective and have a fun adventure. If you have
+							never been on a helicopter before, this is a great place to do
+							it.
 						</p>
+						<a class="hero__button button button--fill" href="#">
+							Get started
+						</a>
 					</div>
-					<!-- /.feature__column -->
-					<div class="feature__column column">
-						<div class="feature__icon feature__icon--fill">
-							<picture>
-								<source srcset="img/icons/danger.svg" type="image/webp" />
-                                <img src="img/icons/danger.svg" alt="" />
-                            </picture>
-						</div>
-						<h3 class="feature__title bold">Design surveys</h3>
-						<p class="feature__text">
-							Sports betting, lottery and bingo playing for the fun
-						</p>
-					</div>
-					<!-- /.feature__column -->
-					<div class="feature__column column">
-						<div class="feature__icon feature__icon--outline">
-							<picture>
-								<source srcset="img/icons/handshake.svg" type="image/webp" />
-								<img src="img/icons/handshake.svg" alt=""
-							/></picture>
-						</div>
-						<h3 class="feature__title bold">Preference tests</h3>
-						<p class="feature__text">
-							The Myspace page defines the individual.
-						</p>
-					</div>
-					<!-- /.feature__column -->
-					<div class="feature__column column">
-						<div class="feature__icon feature__icon--outline">
-							<picture>
-								<source
-									srcset="img/icons/user-astronaut.svg"
-									type="image/webp" />
-                                <img src="img/icons/user-astronaut.svg" alt="" />
-                            </picture>
-						</div>
-						<h3 class="feature__title bold">User astronaut</h3>
-						<p class="feature__text">
-							Personal choices and the overall personality of the person.
-						</p>
-					</div>
-					<!-- /.feature__column -->
+					<!-- /.hero__block -->
 				</div>
-				<!-- /.feature__row -->
-			</section>
-			<!-- /.feature -->
-
-			<section class="about">
-				<div class="about__row row">
-					<div class="about__column column">
-						<div class="about__img image-wrapper">
-							<picture>
-								<source srcset="img/illustrator.webp" type="image/webp" />
-                                <img src="img/illustrator.png" alt="" />
-                            </picture>
-						</div>
-					</div>
-					<!-- /.about__column -->
-					<div class="about__column column">
-						<div class="about__block">
-							<h3 class="about__subtitle--small">About</h3>
-							<h3 class="about__subtitle">
-								Pro<b class="bold">tips</b>
-								<span class="brand-logo--square"></span>
-							</h3>
-							<h2 class="about__title">Learn with Protips</h2>
-							<ul class="about__list">
-								<li class="about__list-item">Beyond The Naked Eye</li>
-								<li class="about__list-item">Make Grilling A Healthy Experience</li>
-								<li class="about__list-item">Make Sure Your Ice Is Safe And Clean</li>
-								<li class="about__list-item">
-									Peace On Earth A Wonderful Wish But No Way
-								</li>
-								<li class="about__list-item">
-									Get Best Advertiser In Your Side Pocket
-								</li>
-								<li class="about__list-item">What S Under Your Grill</li>
-							</ul>
-							<a class="about__button button button--fill" href="#">
-                                Know more
-                            </a>
-							<button class="play-video-link button">
-								Watch Video
-								<svg
-									width="65"
-									height="65"
-									viewBox="0 0 65 65"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg" >
-									<g>
-										<path
-											fill-rule="evenodd"
-											clip-rule="evenodd"
-											d="M40.0557 24.0279C43.741 25.8705 43.741 31.1295 40.0557 32.9721L11.2361 47.382C7.91156 49.0442 4 46.6267 4 42.9098V14.0902C4 10.3733 7.91156 7.95578 11.2361 9.61803L40.0557 24.0279Z"
-											fill="#FF4F4F" />
-									</g>
-								</svg>
-							</button>
-						</div>
-					</div>
-					<!-- /.about__column -->
-				</div>
-				<!-- /.about__row -->
-			</section>
-			<!-- /.about -->
-
-			<section class="testimonial">
-				<div class="testimonial__block">
-					<h2 class="testimonial__title title">Testimonial</h2>
-					<h3 class="testimonial__subtitle subtitle">
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-					</h3>
-					<div class="testimonials">
-						<ul class="testimonials__list">
-							<li class="testimonials__list-item">
-								<div class="testimonial__card">
-									<a class="testimonial__card-image link" href="#">
-										<picture>
-											<source
-												srcset="img/testimonials/picture_1.webp"
-												type="image/webp" />
-											<img src="img/testimonials/picture_1.png" alt="" />
-										</picture>
-									</a>
-									<a class="testimonial__card-title link" href="#">John Doe</a>
-									<h3 class="testimonial__card-subtitle">CEO, PrettyDopeDesigns</h3>
-									<q class="testimonial__card-quote">
-                                        When To Use High Heat On Your Barbeque, What S Under Your
-										Grill
-									</q>
-								</div>
-							</li>
-							<li class="testimonials__list-item">
-								<div class="testimonial__card">
-									<a class="testimonial__card-image link" href="#">
-										<picture>
-											<source
-												srcset="img/testimonials/picture_1.webp"
-												type="image/webp" />
-											<img src="img/testimonials/picture_1.png" alt="" />
-										</picture>
-									</a>
-									<a class="testimonial__card-title link" href="#">John Doe</a>
-									<h3 class="testimonial__card-subtitle">CEO, PrettyDopeDesigns</h3>
-									<q class="testimonial__card-quote">
-                                        When To Use High Heat On Your Barbeque, What S Under Your
-										Grill
-									</q>
-								</div>
-							</li>
-							<li class="testimonials__list-item">
-								<div class="testimonial__card">
-									<a class="testimonial__card-image link" href="#">
-										<picture>
-											<source
-												srcset="img/testimonials/picture_1.webp"
-												type="image/webp" />
-											<img src="img/testimonials/picture_1.png" alt="" />
-										</picture>
-									</a>
-									<a class="testimonial__card-title link" href="#">John Doe</a>
-									<h3 class="testimonial__card-subtitle">CEO, PrettyDopeDesigns</h3>
-									<q class="testimonial__card-quote">
-                                        When To Use High Heat On Your Barbeque, What S Under Your
-										Grill
-									</q>
-								</div>
-							</li>
-						</ul>
-					</div>
-					<!-- /.testimonial__list -->
-					<!-- List with Slick carousel -->
-				</div>
-				<!-- /.testimonial__block -->
-			</section>
-			<!-- /.testimonial -->
-
-			<section class="story">
-				<div class="story__block">
-					<h2 class="story__title title">Our Story</h2>
-					<h3 class="story__subtitle subtitle">
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-					</h3>
-					<div class="story__row row">
-						<div class="story__column">
-							<div class="story__card">
-								<div class="story__card-icon">
-									<picture>
-										<source srcset="img/icons/birds.svg" type="image/webp" />
-										<img src="img/icons/birds.svg" alt="Who are we?" />
-									</picture>
-								</div>
-								<div class="story__card-body">
-									<h2 class="story__card-title">Who are we?</h2>
-									<p class="story__card-text">
-										There is something about parenthood that gives us a sense of
-										history and a deeply rooted desire to send on into the next
-										generation the great things we have discovered about life.
-									</p>
-									<p class="story__card-text">
-										<a class="link--underlined" href="#">
-                                            And part of that is the desire to instill
-                                        </a>
-                                        in our children the love of science, of learning and
-										particularly the love of nature.
-									</p>
-								</div>
-							</div>
-							<!-- /.story__card -->
-						</div>
-						<!-- /.story__column -->
-						<div class="story__column">
-							<div class="story__card">
-								<div class="story__card-icon">
-									<picture>
-										<source srcset="img/icons/hands.svg" type="image/webp" />
-                                        <img src="img/icons/hands.svg" alt="icon" />
-                                    </picture>
-								</div>
-								<div class="story__card-body">
-									<h2 class="story__card-title">What’s up with the name?</h2>
-									<p class="story__card-text">
-										There are advances being made in science and technology
-										everyday, and a good example of this is the LCD monitor. LCD
-										monitors have several benefits over the old chunky
-										<b class="bold">computer</b> monitors that most users are
-										familiar with. Old computer monitors, take up quite a bit of
-										desktop space, put out a ton of heat, drain a ton of energy,
-										and most often have low picture quality and resolution.
-									</p>
-								</div>
-							</div>
-							<!-- /.story__card -->
-						</div>
-						<!-- /.story__column -->
-					</div>
-					<!-- /.story__row -->
-				</div>
-				<!-- /.story__block -->
-			</section>
-			<!-- /.story -->
-
-			<section class="blog">
-				<div class="blog__body">
-					<h2 class="blog__title title">Our Recent Post</h2>
-					<h3 class="blog__subtitle subtitle">
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-					</h3>
-					<div class="blog-feed">
-						<ul class="blog-feed__list">
-							<li>
-								<div class="blog-feed__post">
-									<picture>
-										<source srcset="img/posts/post_1.webp" type="image/webp" />
-										<img class="blog-feed__post-img" src="img/posts/post_1.png" alt="" />
-									</picture>
-									<a href="#" class="blog-feed__post-title link">
-                                        Upgrading To Microsoft Windows Vista Tips
-                                    </a>
-									<!-- /.post__title link -->
-									<div class="post-author">
-										<p class="post-author__text">By <b>Abul Hasan Milon</b></p>
-										<p class="post-author__date">02 Feb 2019</p>
-									</div>
-								</div>
-							</li>
-							<!-- /.list__item post -->
-							<li>
-								<div class="blog-feed__post">
-									<picture>
-										<source srcset="img/posts/post_2.webp" type="image/webp" />
-										<img class="blog-feed__post-img" src="img/posts/post_2.png" alt="" />
-									</picture>
-									<a href="#" class="blog-feed__post-title link link--active">
-										Finally A Top Secret Way You Can Get Google Adwords Pay Per
-										Clicks Free
-									</a>
-									<!-- /.post__title link -->
-									<div class="post-author">
-										<p class="post-author__text">By <b>Milon Mahamud</b></p>
-										<p class="post-author__date">06 Feb 2019</p>
-									</div>
-								</div>
-							</li>
-							<!-- /.list__item post -->
-							<li>
-								<div class="blog-feed__post">
-									<picture>
-										<source srcset="img/posts/post_3.webp" type="image/webp" />
-										<img class="blog-feed__post-img" src="img/posts/post_3.png" alt="" />
-									</picture>
-									<a href="#" class="blog-feed__post-title link">
-                                        The Universe Through A Child S Eyes
-                                    </a>
-									<!-- /.post__title link -->
-									<div class="post-author">
-										<p class="post-author__text">By <b>Speed Smith</b></p>
-										<p class="post-author__date">08 Feb 2019</p>
-									</div>
-								</div>
-							</li>
-							<!-- /.list__item post -->
-							<li>
-								<div class="blog-feed__post">
-									<picture>
-										<source srcset="img/posts/post_1.webp" type="image/webp" />
-										<img class="blog-feed__post-img" src="img/posts/post_1.png" alt="" />
-									</picture>
-									<a href="#" class="blog-feed__post-title link">
-                                        Upgrading To Microsoft Windows Vista Tips
-                                    </a>
-									<!-- /.post__title link -->
-									<div class="post-author">
-										<p class="post-author__text">By <b>Abul Hasan Milon</b></p>
-										<p class="post-author__date">02 Feb 2019</p>
-									</div>
-								</div>
-							</li>
-							<!-- /.list__item post -->
-							<li>
-								<div class="blog-feed__post">
-									<picture>
-										<source srcset="img/posts/post_2.webp" type="image/webp" />
-										<img class="blog-feed__post-img" src="img/posts/post_2.png" alt="" />
-									</picture>
-									<a href="#" class="blog-feed__post-title link link--active">
-										Finally A Top Secret Way You Can Get Google Adwords Pay Per
-										Clicks Free
-									</a>
-									<!-- /.post__title link -->
-									<div class="post-author">
-										<p class="post-author__text">By <b>Milon Mahamud</b></p>
-										<p class="post-author__date">06 Feb 2019</p>
-									</div>
-								</div>
-							</li>
-							<!-- /.list__item post -->
-							<li>
-								<div class="blog-feed__post">
-									<picture>
-										<source srcset="img/posts/post_3.webp" type="image/webp" />
-										<img class="blog-feed__post-img" src="img/posts/post_3.png" alt="" />
-									</picture>
-									<a href="#" class="blog-feed__post-title link">
-                                        The Universe Through A Child S Eyes
-                                    </a>
-									<!-- /.post__title link -->
-									<div class="post-author">
-										<p class="post-author__text">By <b>Speed Smith</b></p>
-										<p class="post-author__date">08 Feb 2019</p>
-									</div>
-								</div>
-							</li>
-                            <!-- /.list__item post -->
-                            <li>
-								<div class="blog-feed__post">
-									<picture>
-										<source srcset="img/posts/post_1.webp" type="image/webp" />
-										<img class="blog-feed__post-img" src="img/posts/post_1.png" alt="" />
-									</picture>
-									<a href="#" class="blog-feed__post-title link">
-                                        Upgrading To Microsoft Windows Vista Tips
-                                    </a>
-									<!-- /.post__title link -->
-									<div class="post-author">
-										<p class="post-author__text">By <b>Abul Hasan Milon</b></p>
-										<p class="post-author__date">02 Feb 2019</p>
-									</div>
-								</div>
-							</li>
-							<!-- /.list__item post -->
-							<li>
-								<div class="blog-feed__post">
-									<picture>
-										<source srcset="img/posts/post_2.webp" type="image/webp" />
-										<img class="blog-feed__post-img" src="img/posts/post_2.png" alt="" />
-									</picture>
-									<a href="#" class="blog-feed__post-title link link--active">
-										Finally A Top Secret Way You Can Get Google Adwords Pay Per
-										Clicks Free
-									</a>
-									<!-- /.post__title link -->
-									<div class="post-author">
-										<p class="post-author__text">By <b>Milon Mahamud</b></p>
-										<p class="post-author__date">06 Feb 2019</p>
-									</div>
-								</div>
-							</li>
-							<!-- /.list__item post -->
-							<li>
-								<div class="blog-feed__post">
-									<picture>
-										<source srcset="img/posts/post_3.webp" type="image/webp" />
-										<img class="blog-feed__post-img" src="img/posts/post_3.png" alt="" />
-									</picture>
-									<a href="#" class="blog-feed__post-title link">
-                                        The Universe Through A Child S Eyes
-                                    </a>
-									<!-- /.post__title link -->
-									<div class="post-author">
-										<p class="post-author__text">By <b>Speed Smith</b></p>
-										<p class="post-author__date">08 Feb 2019</p>
-									</div>
-								</div>
-							</li>
-							<!-- /.list__item post -->
-						</ul>
-						<!-- /.blog-feed__list -->
-					</div>
-					<!-- /.blog-feed -->
-				</div>
-				<!-- /.blog__body -->
-			</section>
-			<!-- /.blog -->
-
-			<section class="subscribe">
-				<div class="subscribe__row row">
-					<div class="subscribe__column column">
-						<h2 class="subscribe__title">
-							Get Update Protips every newsletter
-						</h2>
-					</div>
-					<!-- /.subscribe__column -->
-					<div class="subscribe__column column">
-						<form class="subscribe__form">
-							<input
-								class="subscribe__input"
-								type="email"
-								placeholder="Enter your email" />
-							<!--    <input class = "subscribe__submit" type = "submit" value      = ""> -->
-							<button class="subscribe__button form__button button">
-								<svg
-									class="subscribe__icon"
-									width="34"
-									height="34"
-									viewBox="0 0 34 34"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<path
-										fill-rule="evenodd"
-										clip-rule="evenodd"
-										d="M9.92286 21.8843C7.74928 20.5923 0 15.9375 0 15.9375C0 15.9375 30.3006 1.26863 32.9169 0L9.92286 21.8843ZM16.9894 34C16.9894 34 12.4691 25.7178 11.0505 23.1094L34 0.966875L33.9788 1.0625C33.7133 1.59375 16.9894 34 16.9894 34Z"
+				<!-- /.hero__column -->
+				<div class="hero__column column">
+					<div class="hero__media">
+						<!-- If video
+								<video>
+										<source src = "template.mp4" type  = "video/mp4">
+										<source src = "template.webm" type = "video/webm">
+								</video> -->
+						<button class="button button--play" type="button" role="button" aria-label="Play Video">
+							<span class="play-oval"></span>
+							<svg class="play-icon" width="65" height="65" viewBox="0 0 65 65" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<g filter="url(#filter0_d)">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M40.0557 24.0279C43.741 25.8705 43.741 31.1295 40.0557 32.9721L11.2361 47.382C7.91156 49.0442 4 46.6267 4 42.9098V14.0902C4 10.3733 7.91156 7.95578 11.2361 9.61803L40.0557 24.0279Z"
 										fill="white" />
-								</svg>
-							</button>
-						</form>
+								</g>
+								<defs>
+									<filter id="filter0_d" x="0" y="0.0837402" width="64.8197" height="64.8326"
+										filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+										<feFlood flood-opacity="0" result="BackgroundImageFix" />
+										<feColorMatrix in="SourceAlpha" type="matrix"
+											values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" />
+										<feOffset dx="9" dy="4" />
+										<feGaussianBlur stdDeviation="6.5" />
+										<feColorMatrix type="matrix"
+											values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.127868 0" />
+										<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+										<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow"
+											result="shape" />
+									</filter>
+								</defs>
+							</svg>
+						</button>
+						<picture>
+							<source srcset="img/media.webp" type="image/webp" />
+							<img width="543" height="501" class="hero__img" src="img/media.png" alt="Hero video" />
+						</picture>
 					</div>
-					<!-- /.subscribe__column -->
+					<!-- /.hero__media -->
 				</div>
-				<!-- /.subscribe__row -->
-			</section>
-			<!-- /.subscribe -->
-		</main>
+				<!-- /.hero__column -->
+			</div>
+			<!-- /.hero__row -->
+			<svg class="hero-bg" width="757" height="614" viewBox="0 0 757 614" fill="none"
+				xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" clip-rule="evenodd"
+					d="M596 610C820.5 644 1163 388.752 1163 140.5C1163 -107.752 900.863 -309 577.5 -309C254.137 -309 -176.746 41 77.877 265C332.5 489 371.5 576 596 610Z"
+					fill="#FF4F4F" />
+			</svg>
+		</section>
+		<!-- /.hero -->
 
-		<footer class="footer container">
-			<div class="footer-wrap">
-				<div class="footer__row row">
-					<div class="footer__column column">
-						<a href="#" class="brand-logo">
+		<section class="feature">
+			<div class="feature__row row">
+				<div class="feature__column column">
+					<div class="feature__icon feature__icon--outline">
+						<picture>
+							<source srcset="img/icons/atlas.svg" type="image/webp" />
+							<img src="img/icons/atlas.svg" alt="" />
+						</picture>
+					</div>
+					<h3 class="feature__title bold">First click tests</h3>
+					<p class="feature__text">
+						While most people enjoy casino gambling,
+					</p>
+				</div>
+				<!-- /.feature__column -->
+				<div class="feature__column column">
+					<div class="feature__icon feature__icon--fill">
+						<picture>
+							<source srcset="img/icons/danger.svg" type="image/webp" />
+							<img src="img/icons/danger.svg" alt="" />
+						</picture>
+					</div>
+					<h3 class="feature__title bold">Design surveys</h3>
+					<p class="feature__text">
+						Sports betting, lottery and bingo playing for the fun
+					</p>
+				</div>
+				<!-- /.feature__column -->
+				<div class="feature__column column">
+					<div class="feature__icon feature__icon--outline">
+						<picture>
+							<source srcset="img/icons/handshake.svg" type="image/webp" />
+							<img src="img/icons/handshake.svg" alt="" /></picture>
+					</div>
+					<h3 class="feature__title bold">Preference tests</h3>
+					<p class="feature__text">
+						The Myspace page defines the individual.
+					</p>
+				</div>
+				<!-- /.feature__column -->
+				<div class="feature__column column">
+					<div class="feature__icon feature__icon--outline">
+						<picture>
+							<source srcset="img/icons/user-astronaut.svg" type="image/webp" />
+							<img src="img/icons/user-astronaut.svg" alt="" />
+						</picture>
+					</div>
+					<h3 class="feature__title bold">User astronaut</h3>
+					<p class="feature__text">
+						Personal choices and the overall personality of the person.
+					</p>
+				</div>
+				<!-- /.feature__column -->
+			</div>
+			<!-- /.feature__row -->
+		</section>
+		<!-- /.feature -->
+
+		<section class="about">
+			<div class="about__row row">
+				<div class="about__column column">
+					<div class="about__img image-wrapper">
+						<picture>
+							<source srcset="img/illustrator.webp" type="image/webp" />
+							<img src="img/illustrator.png" alt="" />
+						</picture>
+					</div>
+				</div>
+				<!-- /.about__column -->
+				<div class="about__column column">
+					<div class="about__block">
+						<h3 class="about__subtitle--small">About</h3>
+						<h3 class="about__subtitle">
 							Pro<b class="bold">tips</b>
 							<span class="brand-logo--square"></span>
+						</h3>
+						<h2 class="about__title">Learn with Protips</h2>
+						<ul class="about__list">
+							<li class="about__list-item">Beyond The Naked Eye</li>
+							<li class="about__list-item">Make Grilling A Healthy Experience</li>
+							<li class="about__list-item">Make Sure Your Ice Is Safe And Clean</li>
+							<li class="about__list-item">
+								Peace On Earth A Wonderful Wish But No Way
+							</li>
+							<li class="about__list-item">
+								Get Best Advertiser In Your Side Pocket
+							</li>
+							<li class="about__list-item">What S Under Your Grill</li>
+						</ul>
+						<a class="about__button button button--fill" href="#">
+							Know more
 						</a>
-						<p class="footer__text">
-							Maui helicopter tours are a great way to see the island from a
-							different perspective and have a fun adventure.
-						</p>
-					</div>
-					<div class="footer__column column">
-						<h3 class="footer__title">Quick Links</h3>
-						<ul class="footer__list">
-							<li class="footer__list-item">
-								<a href="" class="footer__links">About Us</a>
-							</li>
-							<li class="footer__list-item">
-								<a href="" class="footer__links">Blog</a>
-							</li>
-							<li class="footer__list-item">
-								<a href="" class="footer__links">Contact</a>
-							</li>
-							<li class="footer__list-item">
-								<a href="" class="footer__links">FAQ</a>
-							</li>
-						</ul>
-					</div>
-					<div class="footer__column column">
-						<h3 class="footer__title">Pages</h3>
-						<ul class="footer__list">
-							<li class="footer__list-item">
-								<a href="" class="footer__links">Disclaimer</a>
-							</li>
-							<li class="footer__list-item">
-								<a href="" class="footer__links">Financing</a>
-							</li>
-							<li class="footer__list-item">
-								<a href="" class="footer__links">Privacy Policy</a>
-							</li>
-							<li class="footer__list-item">
-								<a href="" class="footer__links">Terms of Service</a>
-							</li>
-						</ul>
-					</div>
-					<div class="footer__column column">
-						<h3 class="footer__title">Legal Stuff</h3>
-						<ul class="footer__list">
-							<li class="footer__list-item">
-								<a href="" class="footer__links">Disclaimer</a>
-							</li>
-							<li class="footer__list-item">
-								<a href="" class="footer__links">Financing</a>
-							</li>
-							<li class="footer__list-item">
-								<a href="" class="footer__links">Privacy Policy</a>
-							</li>
-							<li class="footer__list-item">
-								<a href="" class="footer__links">Terms of Service</a>
-							</li>
-						</ul>
+						<button class="play-video-link button">
+							Watch Video
+							<svg width="65" height="65" viewBox="0 0 65 65" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<g>
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M40.0557 24.0279C43.741 25.8705 43.741 31.1295 40.0557 32.9721L11.2361 47.382C7.91156 49.0442 4 46.6267 4 42.9098V14.0902C4 10.3733 7.91156 7.95578 11.2361 9.61803L40.0557 24.0279Z"
+										fill="#FF4F4F" />
+								</g>
+							</svg>
+						</button>
 					</div>
 				</div>
+				<!-- /.about__column -->
 			</div>
-		</footer>
+			<!-- /.about__row -->
+		</section>
+		<!-- /.about -->
 
-		<!-- JQuery -->
-		<script src="js/jquery-3.5.1.min.js"></script>
+		<section class="testimonial">
+			<div class="testimonial__block">
+				<h2 class="testimonial__title title">Testimonial</h2>
+				<h3 class="testimonial__subtitle subtitle">
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+				</h3>
+				<div class="testimonials swiper">
+					<ul class="testimonials__list swiper-wrapper">
+						<li class="testimonials__list-item swiper-slide">
+							<div class="testimonial__card">
+								<a class="testimonial__card-image link" href="#">
+									<picture>
+										<source srcset="img/testimonials/picture_1.webp" type="image/webp" />
+										<img width="100" height="100" src="img/testimonials/picture_1.png" alt="John Doe" />
+									</picture>
+								</a>
+								<a class="testimonial__card-title link" href="#">John Doe</a>
+								<h3 class="testimonial__card-subtitle">CEO, PrettyDopeDesigns</h3>
+								<q class="testimonial__card-quote">
+									When To Use High Heat On Your Barbeque, What S Under Your
+									Grill
+								</q>
+							</div>
+						</li>
+						<li class="testimonials__list-item swiper-slide">
+							<div class="testimonial__card">
+								<a class="testimonial__card-image link" href="#">
+									<picture>
+										<source srcset="img/testimonials/picture_1.webp" type="image/webp" />
+										<img width="100" height="100" src="img/testimonials/picture_1.png" alt="John Doe" />
+									</picture>
+								</a>
+								<a class="testimonial__card-title link" href="#">John Doe</a>
+								<h3 class="testimonial__card-subtitle">CEO, PrettyDopeDesigns</h3>
+								<q class="testimonial__card-quote">
+									When To Use High Heat On Your Barbeque, What S Under Your
+									Grill
+								</q>
+							</div>
+						</li>
+						<li class="testimonials__list-item swiper-slide">
+							<div class="testimonial__card">
+								<a class="testimonial__card-image link" href="#">
+									<picture>
+										<source srcset="img/testimonials/picture_1.webp" type="image/webp" />
+										<img width="100" height="100" src="img/testimonials/picture_1.png" alt="John Doe" />
+									</picture>
+								</a>
+								<a class="testimonial__card-title link" href="#">John Doe</a>
+								<h3 class="testimonial__card-subtitle">CEO, PrettyDopeDesigns</h3>
+								<q class="testimonial__card-quote">
+									When To Use High Heat On Your Barbeque, What S Under Your
+									Grill
+								</q>
+							</div>
+						</li>
+					</ul>
+					<div class="testimonials-pagination swiper-pagination"></div>
+				</div>
+				<!-- /.testimonial__list -->
+				<!-- List with Swiper carousel -->
+			</div>
+			<!-- /.testimonial__block -->
+		</section>
+		<!-- /.testimonial -->
 
-		<!-- Slick slider -->
-		<script src="slick/slick.min.js"></script>
-		<script src="js/script.min.js"></script>
-	</body>
+		<section class="story">
+			<div class="story__block">
+				<h2 class="story__title title">Our Story</h2>
+				<h3 class="story__subtitle subtitle">
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+				</h3>
+				<div class="story__row row">
+					<div class="story__column">
+						<div class="story__card">
+							<div class="story__card-icon">
+								<picture>
+									<source srcset="img/icons/birds.svg" type="image/webp" />
+									<img src="img/icons/birds.svg" alt="Who are we?" />
+								</picture>
+							</div>
+							<div class="story__card-body">
+								<h2 class="story__card-title">Who are we?</h2>
+								<p class="story__card-text">
+									There is something about parenthood that gives us a sense of
+									history and a deeply rooted desire to send on into the next
+									generation the great things we have discovered about life.
+								</p>
+								<p class="story__card-text">
+									<a class="link--underlined" href="#">
+										And part of that is the desire to instill
+									</a>
+									in our children the love of science, of learning and
+									particularly the love of nature.
+								</p>
+							</div>
+						</div>
+						<!-- /.story__card -->
+					</div>
+					<!-- /.story__column -->
+					<div class="story__column">
+						<div class="story__card">
+							<div class="story__card-icon">
+								<picture>
+									<source srcset="img/icons/hands.svg" type="image/webp" />
+									<img src="img/icons/hands.svg" alt="icon" />
+								</picture>
+							</div>
+							<div class="story__card-body">
+								<h2 class="story__card-title">What’s up with the name?</h2>
+								<p class="story__card-text">
+									There are advances being made in science and technology
+									everyday, and a good example of this is the LCD monitor. LCD
+									monitors have several benefits over the old chunky
+									<b class="bold">computer</b> monitors that most users are
+									familiar with. Old computer monitors, take up quite a bit of
+									desktop space, put out a ton of heat, drain a ton of energy,
+									and most often have low picture quality and resolution.
+								</p>
+							</div>
+						</div>
+						<!-- /.story__card -->
+					</div>
+					<!-- /.story__column -->
+				</div>
+				<!-- /.story__row -->
+			</div>
+			<!-- /.story__block -->
+		</section>
+		<!-- /.story -->
+
+		<section class="blog">
+			<div class="blog__body">
+				<h2 class="blog__title title">Our Recent Post</h2>
+				<h3 class="blog__subtitle subtitle">
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+				</h3>
+				<div class="blog-feed swiper">
+					<ul class="blog-feed__list swiper-wrapper">
+						<li class="swiper-slide">
+							<div class="blog-feed__post">
+								<picture>
+									<source srcset="img/posts/post_1.webp" type="image/webp" />
+									<img width="384" height="185" class="blog-feed__post-img" src="img/posts/post_1.png" alt="" />
+								</picture>
+								<a href="#" class="blog-feed__post-title link">
+									Upgrading To Microsoft Windows Vista Tips
+								</a>
+								<!-- /.post__title link -->
+								<div class="post-author">
+									<p class="post-author__text">By <b>Abul Hasan Milon</b></p>
+									<p class="post-author__date">02 Feb 2019</p>
+								</div>
+							</div>
+						</li>
+						<!-- /.list__item post -->
+						<li class="swiper-slide">
+							<div class="blog-feed__post">
+								<picture>
+									<source srcset="img/posts/post_2.webp" type="image/webp" />
+									<img width="384" height="185" class="blog-feed__post-img" src="img/posts/post_2.png" alt="" />
+								</picture>
+								<a href="#" class="blog-feed__post-title link link--active">
+									Finally A Top Secret Way You Can Get Google Adwords Pay Per
+									Clicks Free
+								</a>
+								<!-- /.post__title link -->
+								<div class="post-author">
+									<p class="post-author__text">By <b>Milon Mahamud</b></p>
+									<p class="post-author__date">06 Feb 2019</p>
+								</div>
+							</div>
+						</li>
+						<!-- /.list__item post -->
+						<li class="swiper-slide">
+							<div class="blog-feed__post">
+								<picture>
+									<source srcset="img/posts/post_3.webp" type="image/webp" />
+									<img width="384" height="185" class="blog-feed__post-img" src="img/posts/post_3.png" alt="" />
+								</picture>
+								<a href="#" class="blog-feed__post-title link">
+									The Universe Through A Child S Eyes
+								</a>
+								<!-- /.post__title link -->
+								<div class="post-author">
+									<p class="post-author__text">By <b>Speed Smith</b></p>
+									<p class="post-author__date">08 Feb 2019</p>
+								</div>
+							</div>
+						</li>
+						<!-- /.list__item post -->
+						<li class="swiper-slide">
+							<div class="blog-feed__post">
+								<picture>
+									<source srcset="img/posts/post_1.webp" type="image/webp" />
+									<img width="384" height="185" class="blog-feed__post-img" src="img/posts/post_1.png" alt="" />
+								</picture>
+								<a href="#" class="blog-feed__post-title link">
+									Upgrading To Microsoft Windows Vista Tips
+								</a>
+								<!-- /.post__title link -->
+								<div class="post-author">
+									<p class="post-author__text">By <b>Abul Hasan Milon</b></p>
+									<p class="post-author__date">02 Feb 2019</p>
+								</div>
+							</div>
+						</li>
+						<!-- /.list__item post -->
+						<li class="swiper-slide">
+							<div class="blog-feed__post">
+								<picture>
+									<source srcset="img/posts/post_2.webp" type="image/webp" />
+									<img width="384" height="185" class="blog-feed__post-img" src="img/posts/post_2.png" alt="" />
+								</picture>
+								<a href="#" class="blog-feed__post-title link link--active">
+									Finally A Top Secret Way You Can Get Google Adwords Pay Per
+									Clicks Free
+								</a>
+								<!-- /.post__title link -->
+								<div class="post-author">
+									<p class="post-author__text">By <b>Milon Mahamud</b></p>
+									<p class="post-author__date">06 Feb 2019</p>
+								</div>
+							</div>
+						</li>
+						<!-- /.list__item post -->
+						<li class="swiper-slide">
+							<div class="blog-feed__post">
+								<picture>
+									<source srcset="img/posts/post_3.webp" type="image/webp" />
+									<img width="384" height="185" class="blog-feed__post-img" src="img/posts/post_3.png" alt="" />
+								</picture>
+								<a href="#" class="blog-feed__post-title link">
+									The Universe Through A Child S Eyes
+								</a>
+								<!-- /.post__title link -->
+								<div class="post-author">
+									<p class="post-author__text">By <b>Speed Smith</b></p>
+									<p class="post-author__date">08 Feb 2019</p>
+								</div>
+							</div>
+						</li>
+						<!-- /.list__item post -->
+						<li class="swiper-slide">
+							<div class="blog-feed__post">
+								<picture>
+									<source srcset="img/posts/post_1.webp" type="image/webp" />
+									<img width="384" height="185" class="blog-feed__post-img" src="img/posts/post_1.png" alt="" />
+								</picture>
+								<a href="#" class="blog-feed__post-title link">
+									Upgrading To Microsoft Windows Vista Tips
+								</a>
+								<!-- /.post__title link -->
+								<div class="post-author">
+									<p class="post-author__text">By <b>Abul Hasan Milon</b></p>
+									<p class="post-author__date">02 Feb 2019</p>
+								</div>
+							</div>
+						</li>
+						<!-- /.list__item post -->
+						<li class="swiper-slide">
+							<div class="blog-feed__post">
+								<picture>
+									<source srcset="img/posts/post_2.webp" type="image/webp" />
+									<img width="384" height="185" class="blog-feed__post-img" src="img/posts/post_2.png" alt="" />
+								</picture>
+								<a href="#" class="blog-feed__post-title link link--active">
+									Finally A Top Secret Way You Can Get Google Adwords Pay Per
+									Clicks Free
+								</a>
+								<!-- /.post__title link -->
+								<div class="post-author">
+									<p class="post-author__text">By <b>Milon Mahamud</b></p>
+									<p class="post-author__date">06 Feb 2019</p>
+								</div>
+							</div>
+						</li>
+						<!-- /.list__item post -->
+						<li class="swiper-slide">
+							<div class="blog-feed__post">
+								<picture>
+									<source srcset="img/posts/post_3.webp" type="image/webp" />
+									<img width="384" height="185" class="blog-feed__post-img" src="img/posts/post_3.png" alt="" />
+								</picture>
+								<a href="#" class="blog-feed__post-title link">
+									The Universe Through A Child S Eyes
+								</a>
+								<!-- /.post__title link -->
+								<div class="post-author">
+									<p class="post-author__text">By <b>Speed Smith</b></p>
+									<p class="post-author__date">08 Feb 2019</p>
+								</div>
+							</div>
+						</li>
+						<!-- /.list__item post -->
+					</ul>
+					<!-- /.blog-feed__list -->
+					<div class="blog-feed-pagination swiper-pagination"></div>
+				</div>
+				<!-- /.blog-feed -->
+			</div>
+			<!-- /.blog__body -->
+		</section>
+		<!-- /.blog -->
+
+		<section class="subscribe">
+			<div class="subscribe__row row">
+				<div class="subscribe__column column">
+					<h2 class="subscribe__title">
+						Get Update Protips every newsletter
+					</h2>
+				</div>
+				<!-- /.subscribe__column -->
+				<div class="subscribe__column column">
+					<form class="subscribe__form">
+						<input class="subscribe__input" type="email" placeholder="Enter your email" />
+						<!--    <input class = "subscribe__submit" type = "submit" value      = ""> -->
+						<button class="subscribe__button form__button button" type="submit" role="button" aria-label="Confirm mailing address for subscription">
+							<svg class="subscribe__icon" width="34" height="34" viewBox="0 0 34 34" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M9.92286 21.8843C7.74928 20.5923 0 15.9375 0 15.9375C0 15.9375 30.3006 1.26863 32.9169 0L9.92286 21.8843ZM16.9894 34C16.9894 34 12.4691 25.7178 11.0505 23.1094L34 0.966875L33.9788 1.0625C33.7133 1.59375 16.9894 34 16.9894 34Z"
+									fill="white" />
+							</svg>
+						</button>
+					</form>
+				</div>
+				<!-- /.subscribe__column -->
+			</div>
+			<!-- /.subscribe__row -->
+		</section>
+		<!-- /.subscribe -->
+	</main>
+
+	<footer class="footer container">
+		<div class="footer-wrap">
+			<div class="footer__row row">
+				<div class="footer__column column">
+					<a href="#" class="brand-logo">
+						Pro<b class="bold">tips</b>
+						<span class="brand-logo--square"></span>
+					</a>
+					<p class="footer__text">
+						Maui helicopter tours are a great way to see the island from a
+						different perspective and have a fun adventure.
+					</p>
+				</div>
+				<div class="footer__column column">
+					<h3 class="footer__title">Quick Links</h3>
+					<ul class="footer__list">
+						<li class="footer__list-item">
+							<a href="#" class="footer__links">About Us</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__links">Blog</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__links">Contact</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__links">FAQ</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__column column">
+					<h3 class="footer__title">Pages</h3>
+					<ul class="footer__list">
+						<li class="footer__list-item">
+							<a href="#" class="footer__links">Disclaimer</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__links">Financing</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__links">Privacy Policy</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__links">Terms of Service</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__column column">
+					<h3 class="footer__title">Legal Stuff</h3>
+					<ul class="footer__list">
+						<li class="footer__list-item">
+							<a href="#" class="footer__links">Disclaimer</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__links">Financing</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__links">Privacy Policy</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__links">Terms of Service</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Swiper -->
+	<script src="lib/swiper.min.js"></script>
+	<script src="js/script.min.js"></script>
+</body>
+
 </html>
